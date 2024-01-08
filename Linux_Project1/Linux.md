@@ -1,6 +1,8 @@
 # Linux Practice Project
 ## File Manipulation 
-### 1. Sudo command
+### 1. sudo command
 ![Sudo Apt Upgrade](Linux_Images/Sudo.PNG)
 ### 2. pwd command
 ![Sudo Apt Upgrade](Linux_Images/PWD.PNG)
+### cd command
+![Sudo Apt Upgrade](Linux_Images/CD.PNG)
