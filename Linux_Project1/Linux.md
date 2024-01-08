@@ -7,6 +7,5 @@
 ### 3. cd command
 ![change directory](Linux_Images/CD.PNG)
 ![change directory](Linux_Images/CD .. CD -.PNG)
-
 ### 4. cd command
 ![chnge directory](Linux_Images/CD.PNG)
