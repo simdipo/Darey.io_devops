@@ -1,2 +1,2 @@
 # Darey.io_devops
-This is my DEVOP resposItory as a DEVOP Engineer
+This is my DEVOP respository as a DEVOP Engineer
