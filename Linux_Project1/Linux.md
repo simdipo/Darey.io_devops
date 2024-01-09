@@ -9,3 +9,4 @@
 ![change directory](Linux_Images/CDCD.PNG)
 ### 4. ls command
 ![chnge directory](Linux_Images/LS.PNG)
+![chnge directory](Linux_Images/LS2.PNG)
