@@ -8,4 +8,4 @@
 ![change directory](Linux_Images/CD.PNG)
 ![change directory](Linux_Images/CDCD.PNG)
 ### 4. ls command
-![chnge directory](Linux_Images/ls.PNG)
+![chnge directory](Linux_Images/LS.PNG)
