@@ -19,7 +19,7 @@ Cat command is used to write or read file contents to the standard output.
 ![List directory](Linux_Images/CAT.png)
 ### 6. cp command
 Cp command is used to copy files or folder from one source to another.
-![List directory](Linux_Images/cp.png)
+![List directory](Linux_Images/CP.png)
 ### 7 mv command
 mv command: 
 The primary use of the mv command is to move and rename files and directories
