@@ -1,7 +1,7 @@
 # Linux Practice Project
 ## File Manipulation 
 ### 1. sudo command
-This is a superusr do command that enable user to prform a task that requires administrative or root permissions.
+This is a superusr do command that enable user to perform a task that requires administrative or root permissions.
 ![Sudo Apt Upgrade](Linux_Images/Sudo.PNG)
 ### 2. pwd command
 This simply means a present working directory, this makes us to know the directories we are working from.
