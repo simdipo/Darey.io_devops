@@ -16,17 +16,17 @@ Ls command is simply usd to list directories or files
 ![List directory](Linux_Images/LS2.PNG)
 ### 5. cat command
 Cat command is used to write or read file contents to the standard output.
-![List directory](Linux_Images/CAT.PNG)
+![List directory](Linux_Images/CAT.png)
 ### 6. cp command
 Cp command is used to copy files or folder from one source to another.
-![List directory](Linux_Images/cp.PNG)
+![List directory](Linux_Images/cp.png)
 ### 7 mv command
 mv command: 
 The primary use of the mv command is to move and rename files and directories
-![List directory](Linux_Images/mv.PNG)
+![List directory](Linux_Images/mv.png)
 ### 8. mkdir command:
 Use the mkdir command to create one or multiple directories at once and set permissions for each of them.
-![List directory](Linux_Images/mkdir.PNG)
+![List directory](Linux_Images/mkdir.png)
 ### 9. rmdir command:
 To permanently delete an empty directory, use the rmdir command.
 ![List directory](Linux_Images/rmdir.png)
