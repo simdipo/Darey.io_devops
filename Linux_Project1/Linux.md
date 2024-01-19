@@ -23,7 +23,7 @@ Cp command is used to copy files or folder from one source to another.
 ### 7 mv command
 mv command: 
 The primary use of the mv command is to move and rename files and directories
-![List directory](Linux_Images/mv.png)
+![List directory](Linux_Images/MV.PNG)
 ### 8. mkdir command:
 Use the mkdir command to create one or multiple directories at once and set permissions for each of them.
 ![List directory](Linux_Images/mkdir.png)
