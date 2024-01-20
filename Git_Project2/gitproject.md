@@ -1,5 +1,5 @@
 # Git Project
-# What is Git
+### What is Git
 Git is a distributed version control system. This is a typical definition you will find on the internet.
 Git essentially solves the problem of sharing source code efficiently and keeping track of changes made to
 source code
