@@ -42,4 +42,11 @@ The locate command can find a file in the database system.
 ### 13. find command
 The find command to search for files within a specific directory and perform subsequent operations.
 ![List directory](Linux_Images/find.png)
-
+### 14. grep command:
+Another basic Linux command on the list is grep or global regular expression print. It lets you find a word by searching
+through all the texts in a specific file.
+![List directory](Linux_Images/grep.png)
+### 15. df command:
+iction to Linux Course
+Use the df command to report the system's disk spare usage, shown in percentage and kilobyte (KB).
+![List directory](Linux_Images/df.png)
