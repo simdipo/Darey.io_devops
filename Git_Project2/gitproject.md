@@ -16,4 +16,8 @@ Git adopted a different approach. It allows developers make their own copy of th
 referred to as a Distributed Version Control System.
 ### Initializing a Git Repository
 
-![initiate git](Linux_Images/git_1.png)
+![initiate git](Git_Images/git_1.png)
+
+### Making your first Commit
+![initiate git](Git_Images/git_2.png)
+
