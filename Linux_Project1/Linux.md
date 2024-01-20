@@ -16,11 +16,7 @@ Ls command is simply usd to list directories or files
 ![List directory](Linux_Images/LS2.PNG)
 ### 5. cat command
 Cat command is used to write or read file contents to the standard output.
-<<<<<<< HEAD
 ![List directory](Linux_Images/CAT.png)
-=======
-![List directory](Linux_Images/CAT.)
->>>>>>> 8ca6f6648d72c2e399e99bb986fb8231a1dda26a
 ### 6. cp command
 Cp command is used to copy files or folder from one source to another.
 ![List directory](Linux_Images/cp.png)
