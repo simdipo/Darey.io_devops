@@ -137,6 +137,7 @@ Run the hostname command to know the system's hostname. You can execute it with 
 ![hostname directory](Linux_Images/hostname.png)
 ### 34. useradd, userdel commands:
 Linux is a multi-user system, meaning more than one'person can use it simultaneously. useradd is used to create account, while the passwd command allows you to add a password. Only those with root privileges or sudo can useradd command.
+
 ![useradd directory](Linux_Images/useradd.png)
 ### 35. apt-get command:
 apt-get is a command line tool for handling Advanced Package Tool (APT) libraries in Linux. It lets you retrieve
