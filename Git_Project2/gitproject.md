@@ -19,5 +19,20 @@ referred to as a Distributed Version Control System.
 ![initiate git](Git_Images/git_1.png)
 
 ### Making your first Commit
-![initiate git](Git_Images/git_2.png)
+![Git commit](Git_Images/git_2.png)
 
+# Working with Branches
+### Working with Branches
+Git branch is commonly used to develop new feature of an application.
+Git branch is also an important tool for collaboration within remote teams(developers working from different location).
+They can make separate branches while working on same feature. And at the end of the day, converge their code to one
+branch.
+## Make you first git Branch
+To make a new branch run this command: git checkout -b
+The-b flag helps your create and change into the new branch
+![Git branch](Git_Images/git_3.png)
+## Listing your git branches
+![Git branch list](Git_Images/git_4.png)
+
+## Change into an old branch
+![Git branch list](Git_Images/git_5.png)
