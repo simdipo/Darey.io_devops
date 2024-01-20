@@ -55,3 +55,7 @@ du command is used to check how much space a file or a directory takes up.
 ### 17.head command:
 The head command allows you to view the first ten lines of a text. Adding an option lets you change the number of lines shown below:
 ![Head directory](Linux_Images/head.png)
+### 18. tail command:
+The tail command displays the last ten lines of a file. It allows users to check whether a file has
+new data or to read error messages.
+![tail directory](Linux_Images/tail.png)
