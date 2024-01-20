@@ -35,10 +35,10 @@ The rm command is-used to delete files within a directory.
 ![List directory](Linux_Images/rm.png)
 ### 11. touch command:
 The touch command allows you to create an empty file or generate and modify a timstamp in a linux command line.
-![List directory](Linux_Images/touch.png)
+![List directory](Linux_Images/touch.PNG)
 ### 12. locate command:
 The locate command can find a file in the database system.
-![List directory](Linux_Images/locate.png)
+![List directory](Linux_Images/locate.PNG)
 ### 13. find command
 The find command to search for files within a specific directory and perform subsequent operations.
 ![List directory](Linux_Images/find.png)
