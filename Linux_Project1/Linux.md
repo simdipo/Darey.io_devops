@@ -114,6 +114,9 @@ without hindering other running processes.
 ### 27. uname command:
 The uname or unix name.command will print detailed information about your Linux system and hardware. 
 ![uname directory](Linux_Images/uname.png)
+### 28. top command
+This command will display all running processes and a dynamic real-time view of the current system, it sums up the resource utilization, from CPU to memory usage.
+![top directory](Linux_Images/top.png)
 ### 29.history command:
 With history, the system will list up to 500 previously executed commands, allowing you to reuse them without re-
 entering. Keep in mind that only users with sudo privileges can execute this command. How this utility runs also depends
@@ -133,24 +136,23 @@ automatically choose the best compression ratio.
 Run the hostname command to know the system's hostname. You can execute it with or without an option.
 ![hostname directory](Linux_Images/hostname.png)
 ### 34. useradd, userdel commands:
-Linux is a multi-user system, meaning more than one'person can use it simultaneously. useradd is used to create
-account, while the passwd command allows you to add a password. Only those with root privileges or sudo can
-useradd command.
+Linux is a multi-user system, meaning more than one'person can use it simultaneously. useradd is used to create account, while the passwd command allows you to add a password. Only those with root privileges or sudo can useradd command.
 ![useradd directory](Linux_Images/useradd.png)
 ### 35. apt-get command:
 apt-get is a command line tool for handling Advanced Package Tool (APT) libraries in Linux. It lets you retrieve
-information and bundles from authenticated sources to manage, update, remove, and install software and its
-dependencies.
-Running the apt-get command requires you
-![apt-get directory](Linux_Images/apt-get.png)
+information and bundles from authenticated sources to manage, update, remove, and install software and its dependencies.
+
+![apt-get directory](Linux_Images/apt.png)
 ### 36. nano, vi, jed commands:
-Linux allows users to edit and manage files via a text editor, such as hano, Vi, or jed. nano and vid come with the opera
-system, while jed has to be installed.
-The nano command denotes keywords and can work with most languages. To use it, enter the following 
-![editor directory](Linux_Images/editor.png)
+Linux allows users to edit and manage files via a text editor, such as hano, Vi, or jed. nano and vid come with the opera system, while jed has to be installed.
+The nano command denotes keywords and can work with most languages.
+
+![editor directory](Linux_Images/nano.png)
+![editor directory](Linux_Images/vi.png)
 ### 37. alias, unalias commands:
 alias allows you to create a shortcut with the same functionality as a command, file name, or text. When exe
 instructs the shellto replace one string with another.
+
 ![alias directory](Linux_Images/alias.png)
 ### 38. su command:
 The switch user or su command allows you to run a program as a different user. It changes the administrative ac
@@ -158,11 +160,10 @@ the current log-in session. This command is especially beneficial for accessing 
 display manager when the root user is unavailable
 ![su directory](Linux_Images/su.png)
 ### 39. htop command:
-The htop command is an inter active program that monitors system resources and server processes in real time. It
-available on most Linux distributions, and you can install it using the default package manager.
+The htop command is an inter active program that monitors system resources and server processes in real time. It available on most Linux distributions, and you can install it using the default package manager.
 ![htop directory](Linux_Images/htop.png)
 ### 40. ps command:
 The process status or ps command produces a snapshot of all running processes in your system. 
-![ps directory](Linux_Images/ps.png)
+![ps directory](Linux_Images/process.png)
 
 
