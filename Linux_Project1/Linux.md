@@ -64,13 +64,15 @@ The tail command displays the last ten lines of a file. It allows users to check
 
 ![tail directory](Linux_Images/tail.png)
 ### 19. diff command:
-Short for difference, the diff command compares two contents of a file line by line. After analyzing them, it will display
-the parts that do not match.
+Short for difference, the diff command compares two contents of a file line by line. After analyzing them, it will display the parts that do not match.
+
 ![diff directory](Linux_Images/diff.png)
 
 ### 20. tar command:
 The tar command archives multiple files into a TAR file - a common Linux format similar to ZIP, with optional compression.
+
 ![tar directory](Linux_Images/tar.png)
+
 ## Introduction to Linux and Basic Commands
 Linux is a family of open-source Unix operating systems based on the Linux Kernel. They include Ubuntu, Fedora,
 Debian, openSUSE, and Red Hat. Using Linux to manage a Virtual Private Server (VPS) is common practice.
@@ -162,12 +164,13 @@ instructs the shellto replace one string with another.
 The switch user or su command allows you to run a program as a different user. It changes the administrative ac
 the current log-in session. This command is especially beneficial for accessing the system through SSH or using t
 display manager when the root user is unavailable
+
 ![su directory](Linux_Images/su.png)
+
 ### 39. htop command:
 The htop command is an inter active program that monitors system resources and server processes in real time. It available on most Linux distributions, and you can install it using the default package manager.
 ![htop directory](Linux_Images/htop.png)
 ### 40. ps command:
 The process status or ps command produces a snapshot of all running processes in your system. 
 ![ps directory](Linux_Images/process.png)
-
 
