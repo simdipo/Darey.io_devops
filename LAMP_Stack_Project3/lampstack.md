@@ -188,3 +188,48 @@ it is best to remove the file created as it contains sensitive information about
 
 ![Exit SQL](LAMPSTACK_IMAGES/rmindexphp.png)
 
+## Creating a Virtual Host for your Website using Apache
+### Step 5 -Creating a Virtual Host for your Website using Apache
+In this project, we will set up a domain called *projectlamp* , but you can replace this with any domain of your choice.
+
+Apache on Ubuntu 20.04 has one server block enabled by default that is configured to serve documents from the
+/var/www/html directory. We will leave this configuration as is and will add our own directory next to the default.
+one.
+
+Create the directory for projectlamp using '`mkdir`' command as follows:
+
+`sudo mkdir /var/www/projectlamp`
+
+![Exit SQL](LAMPSTACK_IMAGES/mkdirprojectlamp.png)
+
+Next, assign ownership of the directory with the UsER environment variable, which will reference your current
+system user:
+
+`sudo chown -R $USER:$USER /var/www/projectlamp`
+
+![Exit SQL](LAMPSTACK_IMAGES/chown.png)
+
+Then, create and open a new configuration file in Apache sites available directory using your preferred command-
+line editor. Here,we'll be using `vi` or `vim` (They are the same by the way):
+
+`sudo vi /etc/apache2/sites-available/projectlamp.conf`
+
+![Exit SQL](LAMPSTACK_IMAGES/viprojectlamp.png)
+
+
+- This will create a new blank file which we have to edit and insert the command and this is shown below:
+
+![Exit SQL](LAMPSTACK_IMAGES/virtualhost.png)
+
+With the help of the `ls` command we will see below 
+
+`sudo ls /etc/apache2/sites-available`
+
+You will see something like this
+
+- 000-default.conf  
+- default-ssl.conf  
+- projectlamp.conf
+
+![Exit SQL](LAMPSTACK_IMAGES/conf.png)
+
