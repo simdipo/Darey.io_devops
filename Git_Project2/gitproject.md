@@ -30,9 +30,15 @@ branch.
 ## Make you first git Branch
 To make a new branch run this command: git checkout -b
 The-b flag helps your create and change into the new branch
-![Git branch](Git_Images/git_3.png)
+![Git branch](Git_Images/git_branch.png)
 ## Listing your git branches
-![Git branch list](Git_Images/git_4.png)
+![Git branch list](Git_Images/git_list.png)
 
 ## Change into an old branch
-![Git branch list](Git_Images/git_5.png)
+![Git checkout](Git_Images/git_checkout.png)
+
+## Merging a branch into anothe branch
+![Git merge](Git_Images/git_merge.png)
+
+## Deleting a git branch
+![Git delection](Git_Images/git_5.png)
