@@ -172,7 +172,7 @@ To edit the dir.conf using `vim`
 
 ![Exit SQL](LAMPSTACK_IMAGES/vimmodifiedphp.png)
 
-THis will open a blank file and then the code below is added to validate the php code.
+This will open a blank file and then the code below is added to validate the php code.
 
 `<?php`
 
@@ -202,7 +202,7 @@ Create the directory for projectlamp using '`mkdir`' command as follows:
 
 ![Exit SQL](LAMPSTACK_IMAGES/mkdirprojectlamp.png)
 
-Next, assign ownership of the directory with the UsER environment variable, which will reference your current
+Next, assign ownership of the directory with the user environment variable, which will reference your current
 system user:
 
 `sudo chown -R $USER:$USER /var/www/projectlamp`
