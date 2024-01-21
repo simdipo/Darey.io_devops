@@ -1,15 +1,15 @@
 # LAMP STACK IMPLEMENTATION
-The Project(LAMP Stack) is a comprehensive program designed for individuals seeking to build and deploy web
-applications using the LAMP stack. This course offers a hands-on learning experience, guiding participants through the
+The Project *(LAMP Stack)*  is a comprehensive program designed for individuals seeking to build and deploy web
+applications using the *LAMP* stack. This course offers a hands-on learning experience, guiding participants through the
 process of creating dynamic websites by combining Linux, Apache, MySQL, and PHP. Throughout the course and project
 implementation, I have gained a solid understanding of the LAMP stack components and their roles in web
 application development. Starting with an introduction to the LAMP stack architecture.
 
-## WEB STACK IMPLEMENTATION (LAMP STACK) IN AWS
+## WEB STACK IMPLEMENTATION (*LAMP STACK*) IN AWS
 I have realised that everything will be doing as a DevOps engineer is
 around software, websites, applications etc. And, there are different stack of technologies that make different solutions
-possible. These stack of technologies are regarded as WEB STACKS. Examples of Web Stacks include LAMP, LEMP
-MEAN, and MERN stacks.
+possible. These stack of technologies are regarded as WEB STACKS. Examples of Web Stacks include *LAMP, LEMP
+MEAN, and MERN* stacks.
 
 ### What is a Technology stack?
 A technology stack is a set of frameworks and tools used to develop a software product. This set of frameworks and
