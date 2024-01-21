@@ -65,9 +65,9 @@ $ curl http://localhost:80
 or
 $ curl http://127.0.0.1:80
 
-![Apache status](LAMPSTACK_IMAGES/curl1.png)
+![Using curl localhost](LAMPSTACK_IMAGES/curl1.png)
 or
-![Apache status](LAMPSTACK_IMAGES/curl2.png)
+![using curl on loopback address](LAMPSTACK_IMAGES/curl2.png)
 
 Another way to retrieve the Pubic address
 
@@ -83,15 +83,55 @@ MySQL is a popular relational database management
 system used within PHP environments, so we will use it in our project.
 
 sudo apt install mysql-server
-![Apache status](LAMPSTACK_IMAGES/sqlinstall.png)
+![Install SQL](LAMPSTACK_IMAGES/sqlinstall.png)
 
 When prompted, confirm installation by typing and then ENTER
 When the installation is finished, log in to the MysQL console by typing,
 
 sudo mysql
 
-![Apache status](LAMPSTACK_IMAGES/sudomysql.png)
+![sql status](LAMPSTACK_IMAGES/sudomysql.png)
 
 This will connect to the MySOL server as the administrative database user root, which is inferred by the use of sudo
-when running this command. You should see output like this:
+
+To set a password for the sql we run the command below: MAking sure we use password as PassWord.1 which can can chage later
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
+
+![ALter Password](LAMPSTACK_IMAGES/alterapsswd.png)
+
+Exit the MYSQL
+
+![Exit SQL](LAMPSTACK_IMAGES/exitsql.png)
+
+Start the interactive script by running
+
+sudo mysql_secure_installation
+![Exit SQL](LAMPSTACK_IMAGES/securesql.png)
+
+To exit mysql console type exit.
+
+![Exit SQL](LAMPSTACK_IMAGES/exitsql.png)
+
+## Installing PHP
+### Step 3 - Installing PHP
+
+sudo apt install php libapache2-mod-php php-mysql
+
+
+![Exit SQL](LAMPSTACK_IMAGES/phpinstall.png)
+
+To confirm the version of PHP installed run the command below
+
+php -v
+
+![Exit SQL](LAMPSTACK_IMAGES/phpinstllconfirmed.png)
+
+At this point, your LAMP stack is completely installed and fully operational.
+- Linux (Ubuntu)
+- Apache HTTP Server
+- MySQL
+- PHP
+
+
 
