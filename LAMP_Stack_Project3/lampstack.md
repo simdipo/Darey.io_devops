@@ -25,4 +25,4 @@ LEMP (Linux, Nginx, MySQL, PHP or Python, or Perl)
 MERN (MongoDB, ExpressJS, ReactJS, NodeJS)
 MEAN (MongoDB, ExpressJS, AngularJS, NodeJS
 
-![Change directory]LAMPSTACK_IMAGES/cd.png)
+![Change directory](LAMPSTACK_IMAGES/cd.png)
