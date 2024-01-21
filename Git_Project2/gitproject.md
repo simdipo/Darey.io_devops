@@ -53,3 +53,37 @@ The-b flag helps your create and change into the new branch
 ### Clonning remote Git Repository
 
 ![Git clone](Git_Images/git_clone.png)
+
+# Heading1
+## Heading2
+### Heading3
+
+*Italics*
+
+_Italics_
+
+**BOLD**
+
+__BOLD__
+
+- Item1
+
+- Item2
+
+- Item3
+
+1. First Item
+2. Second Item
+3. Third Item
+
+[visit darey.io](https://www.darey.io)
+
+
+![visit darey.io](Git_Images/image.png)
+
+
+
+
+
+
+
