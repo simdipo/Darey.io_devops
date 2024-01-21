@@ -160,3 +160,31 @@ To edit the dir.conf using `vim`
 
 ![Exit SQL](LAMPSTACK_IMAGES/phpconfmodified.png)
 
+- After saving and closing the file, a restart is required to reload the apache for the chages to take effect
+
+`sudo systemctl reload apache2`
+
+![Exit SQL](LAMPSTACK_IMAGES/phpreload.png)
+
+- Now we need to create a new filenamed *index.php* inside your custom web root folder.
+
+`vim /var/www/projectlamp/index.php`
+
+![Exit SQL](LAMPSTACK_IMAGES/vimmodifiedphp.png)
+
+THis will open a blank file and then the code below is added to validate the php code.
+
+`<?php`
+
+`phpinfo();`
+
+`?>`
+
+![Exit SQL](LAMPSTACK_IMAGES/phpinfo.png)
+
+it is best to remove the file created as it contains sensitive information about the PHP environmentand the ubuntu server, which can be removed with  `rm`
+
+`sudo rm /var/www/projectlamp/index.php`
+
+![Exit SQL](LAMPSTACK_IMAGES/rmindexphp.png)
+
