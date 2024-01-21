@@ -24,12 +24,12 @@ individual technologies used together for a specific technology product. some ex
 
 4. MEAN (MongoDB, ExpressJS, AngularJS, NodeJS
 
-Connecting to the EC2 instance using the terminal.
+- Connecting to the EC2 instance using the terminal.
 ![Change directory](LAMPSTACK_IMAGES/cd.png)
 
-Connect to the instance by running
+- Connect to the instance by running
 
-ssh -i "devops.pem" ubuntu@ec2-16-171-133-147.eu-north-1.compute.amazonaws.com
+`ssh -i "devops.pem" ubuntu@ec2-16-171-133-147.eu-north-1.compute.amazonaws.com`
 ![Change directory](LAMPSTACK_IMAGES/instanceconnection.png)
 
 ## Installing Apache and Updating the Firewall
@@ -45,25 +45,29 @@ community of users, and has been in wide use for much of the history of the web,
 for hosting a website
 ## Install Apache using Ubuntu's package manager.
 ### Step 1 - Install Apache using Ubuntu's package manager.
-update a list of packages in package manager
-sudo apt update
+- update a list of packages in package manager.
 
-run apache2 package installation
+`sudo apt update`
 
-sudo apt install apache2
+- run apache2 package installation
+
+`sudo apt install apache2`
 
 ![Apache installation](LAMPSTACK_IMAGES/apacheinstall.png)
 
 To verify that apache2 is running as a service
 
-sudo systemctl status apache2
+`sudo systemctl status apache2`
 
 ![Apache status](LAMPSTACK_IMAGES/apachestatus.png)
 
 To verify if we can access it locally in our Ubuntu shell
-$ curl http://localhost:80
+
+`curl http://localhost:80`
+
 or
-$ curl http://127.0.0.1:80
+
+`curl http://127.0.0.1:80`
 
 ![Using curl localhost](LAMPSTACK_IMAGES/curl1.png)
 or
@@ -88,7 +92,7 @@ sudo apt install mysql-server
 When prompted, confirm installation by typing and then ENTER
 When the installation is finished, log in to the MysQL console by typing,
 
-sudo mysql
+`sudo mysql`
 
 ![sql status](LAMPSTACK_IMAGES/sudomysql.png)
 
@@ -96,7 +100,7 @@ This will connect to the MySOL server as the administrative database user root, 
 
 To set a password for the sql we run the command below: MAking sure we use password as PassWord.1 which can can chage later
 
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
+`ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';`
 
 ![ALter Password](LAMPSTACK_IMAGES/alterapsswd.png)
 
@@ -116,14 +120,14 @@ To exit mysql console type exit.
 ## Installing PHP
 ### Step 3 - Installing PHP
 
-sudo apt install php libapache2-mod-php php-mysql
+`sudo apt install php libapache2-mod-php php-mysql`
 
 
 ![Exit SQL](LAMPSTACK_IMAGES/phpinstall.png)
 
 To confirm the version of PHP installed run the command below
 
-php -v
+`php -v` 
 
 ![Exit SQL](LAMPSTACK_IMAGES/phpinstllconfirmed.png)
 
@@ -133,5 +137,18 @@ At this point, your LAMP stack is completely installed and fully operational.
 - MySQL
 - PHP
 
+## Enable PHP on the website
+### Step 4- Enable PHP on the website
+With the default Directorylndex settings on Apache, a file named index.htmi will always take precedence over an
+== index.php ==  file. 
+
+This is useful for setting up maintenance pages in PHP applications, by creating a temporary
+index.html file containing an informative message to visitors. Because this page willtake precedence over the
+index.php page, it will then become the landing page for the application. Once maintenance is over, the ndex. html
+isrenamed or removed from the document root, bringing back the regular application page.
+In case you want to change this behavior, you'll need to edit the /etc/apache2/mods-enabled/dir.conf file and change the
+order in which the index.php file is listed within the DirectoryIndex directive:
+Copy Below Code
+sudo vim /etc/apache2/mods-enabled/dir.conf
 
 
