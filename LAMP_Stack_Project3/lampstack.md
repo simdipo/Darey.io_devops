@@ -261,4 +261,25 @@ To make sure your configuration file doesn't contain syntax errors.
 
 ![Exit SQL](LAMPSTACK_IMAGES/configtest.png)
 
+- Finally, reload Apche so these changes can take effect.
+
+`sudo systemctl reload apache2`
+
+![Exit SQL](LAMPSTACK_IMAGES/phpreload.png)
+
+Your new website is now active, but the web root **/var/www/projectlamp** is still empty. 
+
+Create an *index.html* file in that
+location so that we can test that the virtual host works as expected:
+
+Now go to your browser and try to open your website URL using IP address:
+
+In the output you will see your server' 's public hostname (DNS name) and public IP address. You can also
+access your website in your browser by publicDNS name, not only by IP-try it out, the result must be the same.
+
+`http://<Public-IP-Address>:80`
+
+![Exit SQL](LAMPSTACK_IMAGES/publicip.png)
+
+
 
