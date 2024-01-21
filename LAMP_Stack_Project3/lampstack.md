@@ -30,6 +30,7 @@ individual technologies used together for a specific technology product. some ex
 - Connect to the instance by running
 
 `ssh -i "devops.pem" ubuntu@ec2-16-171-133-147.eu-north-1.compute.amazonaws.com`
+
 ![Change directory](LAMPSTACK_IMAGES/instanceconnection.png)
 
 ## Installing Apache and Updating the Firewall
@@ -86,7 +87,8 @@ to store and manage data for my site in a relational database.
 MySQL is a popular relational database management
 system used within PHP environments, so we will use it in our project.
 
-sudo apt install mysql-server
+`sudo apt install mysql-server`
+
 ![Install SQL](LAMPSTACK_IMAGES/sqlinstall.png)
 
 When prompted, confirm installation by typing and then ENTER
@@ -104,16 +106,17 @@ To set a password for the sql we run the command below: MAking sure we use passw
 
 ![ALter Password](LAMPSTACK_IMAGES/alterapsswd.png)
 
-Exit the MYSQL
+- Exit the MYSQL
 
 ![Exit SQL](LAMPSTACK_IMAGES/exitsql.png)
 
 Start the interactive script by running
 
-sudo mysql_secure_installation
+`sudo mysql_secure_installation`
+
 ![Exit SQL](LAMPSTACK_IMAGES/securesql.png)
 
-To exit mysql console type exit.
+- To exit mysql console type exit.
 
 ![Exit SQL](LAMPSTACK_IMAGES/exitsql.png)
 
@@ -139,16 +142,21 @@ At this point, your LAMP stack is completely installed and fully operational.
 
 ## Enable PHP on the website
 ### Step 4- Enable PHP on the website
-With the default Directorylndex settings on Apache, a file named index.htmi will always take precedence over an
-== index.php ==  file. 
+With the default Directorylndex settings on Apache, a file named *index.html* will always take precedence over an 
+*index.php*  file. This is useful for setting up maintenance pages in PHP applications, by creating a temporary
 
-This is useful for setting up maintenance pages in PHP applications, by creating a temporary
-index.html file containing an informative message to visitors. Because this page willtake precedence over the
-index.php page, it will then become the landing page for the application. Once maintenance is over, the ndex. html
+*index.html* file containing an informative message to visitors. Because this page willtake precedence over the
+*index.php* page, it will then become the landing page for the application. Once maintenance is over, the ndex. html
 isrenamed or removed from the document root, bringing back the regular application page.
-In case you want to change this behavior, you'll need to edit the /etc/apache2/mods-enabled/dir.conf file and change the
-order in which the index.php file is listed within the DirectoryIndex directive:
-Copy Below Code
-sudo vim /etc/apache2/mods-enabled/dir.conf
 
+In case you want to change this behavior, you'll need to edit the **/etc/apache2/mods-enabled/dir.conf** file and change the
+order in which the *index.php* file is listed within the DirectoryIndex directive:
+
+To edit the dir.conf using `vim`
+
+`sudo vim /etc/apache2/mods-enabled/dir.conf`
+
+![Exit SQL](LAMPSTACK_IMAGES/vimmodifiedphp.png)
+
+![Exit SQL](LAMPSTACK_IMAGES/phpconfmodified.png)
 
