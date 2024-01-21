@@ -42,3 +42,14 @@ The-b flag helps your create and change into the new branch
 
 ## Deleting a git branch
 ![Git delection](Git_Images/git_5.png)
+
+# Collaboration and Remote Repositories.
+### Pushing your local git to your remote github repository
+![Git remote add](Git_Images/git_remote_add.png)
+
+### Git push
+![Git remote push](Git_Images/git_push.png)
+
+### Clonning remote Git Repository
+
+![Git clone](Git_Images/git_clone.png)
