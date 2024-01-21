@@ -233,3 +233,32 @@ You will see something like this
 
 ![Exit SQL](LAMPSTACK_IMAGES/conf.png)
 
+With this VirtualHost configuration, we're telling Apache to serve *project lamp*  using **/var/www/projectlamp** as its
+web root directory. 
+
+If you would like to test Apache without a domain name, you can remove or comment out the
+options ServerName and Server Alias by adding a # character in the beginning of each option's lines. Adding the #
+character there will tell the program to skip processing the instructions on thoselines.
+You can now use a2ensite command to enable the new virtual host:
+
+
+`sudo a2ensite projectlamp`
+
+![Exit SQL](LAMPSTACK_IMAGES/a2ensiteprojectlamp.png)
+
+You might want to disable the default website that comes installed with Apache. This is required if you're not using a
+custom domain name, because in this case Apache's default configuration would overwrite your virtual host. To disable
+
+Apache's default website use a2disite command.
+
+`sudo a2dissite 000-default`
+
+![Exit SQL](LAMPSTACK_IMAGES/a2disitedefault.png)
+
+To make sure your configuration file doesn't contain syntax errors.
+
+`sudo apache2ctl configtest`
+
+![Exit SQL](LAMPSTACK_IMAGES/configtest.png)
+
+
