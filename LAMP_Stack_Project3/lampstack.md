@@ -92,15 +92,15 @@ system used within PHP environments, so we will use it in our project.
 ![Install SQL](LAMPSTACK_IMAGES/sqlinstall.png)
 
 When prompted, confirm installation by typing and then ENTER
-When the installation is finished, log in to the MysQL console by typing,
+When the installation is finished, log in to the Mysql console by typing,
 
 `sudo mysql`
 
 ![sql status](LAMPSTACK_IMAGES/sudomysql.png)
 
-This will connect to the MySOL server as the administrative database user root, which is inferred by the use of sudo
+This will connect to the Mysql server as the administrative database user root, which is inferred by the use of sudo
 
-To set a password for the sql we run the command below: MAking sure we use password as PassWord.1 which can can chage later
+To set a password for the sql we run the command below: Making sure we use password as PassWord.1 which can can chage later
 
 `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';`
 
