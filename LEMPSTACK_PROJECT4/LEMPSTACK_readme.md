@@ -10,5 +10,4 @@ MySQL databases, and develop PHP code to bring applications tolife. Through the 
 willgain proficiency in building dynamic websites with the LEMP stack. We will explore techniques for handling user
 requests,interacting with databases, processing forms, and implementing robust security measures. Furthermore,
 introduce us to popular development frameworks and tools that can elevate our productivity and simplify the web
-application development process. By the end of the Project (LEMP Stack) Course/project, you will have experience to
-setup the full LEMP stack and create remarkable, high-performance web applications.
+application development process.
