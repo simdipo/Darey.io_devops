@@ -146,13 +146,13 @@ Regardless of whether you chose to set up the V ALIDATE PASSMORD PLUGIn , your s
 confirm a password for the MySQL root user. This is not to be confused with the system root. The database root user is
 an administrative user with fullprivileges over the database system. Even though the default authentication method for
 the MySQL root user dispenses the use of a password, even when one is set, you should define a strong password here
-as an additional safety measure. We'lltalk about this in a moment.
+as an additional safety measure. We'll talk about this in a moment.
 If you enabled password validation. you'll be shown the password strength for the root password you just entered and
 your server will ask if you want to continue with that password. If you are happy with your current password, enter
 for "yes" at the prompt:
 
 `Estimated strength of the password: 100
-Do you wish to continue with the password provided?(Press yIY for Yes, any other key for No)`
+Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No)`
 
 For the rest of the questions, press
 and hit the ENTER key at each prompt. This will prompt you to change the root
@@ -161,3 +161,24 @@ that MySOL immediately respects the changes you have made.
 When you'refnished. test if you're able to log in to the MXSQL console by typing:
 
 `sudo mysql -p`
+
+![Loopback address](LEMPSTACK_IMAGES/6sqlpromptpassword.png)
+
+Notice the `-p` flag in this command, which will prompt you for the password used after changing the root user
+password.
+
+To exit the MySQL console, type exit in the mysql prompt:
+
+mysgl> `exit` 
+
+Notice that you need to provide a password to connect as the root user.
+For increased security, it's best to have dedicated user accounts with less expansive privileges set up for every database, especially if you plan on having multiple databases hosted on your server.
+
+`Note: At the time of this writing, the native MySQL PHP library mysqlnd doesn't support caching sha2_aut`
+
+Your MySOL server is now installed and secured., Next, we willinstall PHP, the final component in the LEMP stack.
+
+# Installing PHP
+### Step 3- Installing PHP
+
+
