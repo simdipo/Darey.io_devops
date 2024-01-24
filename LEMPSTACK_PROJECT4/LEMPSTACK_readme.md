@@ -342,7 +342,27 @@ You can leave this file in place as a temporary landing page for your. applicati
 replace it. Once you do that, remember to remove or rename the index.html fle from your document root, as it would
 take precedence over an index. php file by default.
 
+# Testing PHP with Nginx
+### Step 5 - Testing PHP with Nginx
 
+Your LEMP stack should now be completely set up
+At this point, your LAMP stack is completely installed and fully operational.
+
+You can test it to validate that Nginx can correctly hand
+php files off to your PHP processor.
+
+You can do this by creating a test PHP file in your document root. Open a new file called nfolphe within your
+document root in your text editor:
+
+`nano /var/www/projectLEMP/info.php`
+
+![Syntax checks](LEMPSTACK_IMAGES/10infophp.png)
+
+
+w/projertlEMP/info.php
+Type or paste the following lines into the new file. This is valid PHP code that will return information about your server:
+Copy Below Code
+You.can.now,access.this.page in.your.web browset.byvisiting.the.domainname.or public;1P.address.youve setup in your
 
 
 
