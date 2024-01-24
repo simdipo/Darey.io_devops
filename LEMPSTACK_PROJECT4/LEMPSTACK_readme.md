@@ -297,9 +297,57 @@ Activate your configuration by linking to the config file from Nginx's tes-enabl
 
 `sudo ln -s /etc/nginx/sites-available/projectLEMP./etc/nginx/sites-enabled/`
 
-![Loopback address](LEMPSTACK_IMAGES/9linkfile.png)
+![Link NGINX sites](LEMPSTACK_IMAGES/9linkfile.png)
 
-This will tell NGINX to use the configuration 
+This will tell NGINX to use the configuration nct time it is reloaded, you can test your configuration for syntax errors by
+
+` sudo nginx -t`
+
+![Syntax checks](LEMPSTACK_IMAGES/9test.png)
+
+To Unlink
+
+`sudo unlink /etc/nginx/sites-enabled/default`
+
+![Syntax checks](LEMPSTACK_IMAGES/9unlink.png)
+
+To reload again to confirm changes
+
+`sudo systemctl reload nginx` 
+
+![Syntax checks](LEMPSTACK_IMAGES/9reload.png)
+
+Your new website is now active, but the web root */var/www/projectLEMP* is still empty. Create an index.html file in that
+location so that we can test that your new server block works as expected:
+
+`sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname`
+
+Now go to your browser and try tom open your website URL using IP address.
+
+`http://<16.171.168.230>:80`
+
+
+
+If you see the text from 'echo' command you wrote to index.h![Syntax checks](LEMPSTACK_IMAGES/9workingnginx.png)
+tml file, then it means your Nginx site is working as
+expected. In the output you will see your server' 's public hostname(DNS name) and public IP address. You can also
+access your website in your browser by public DNS name, not only by IP - try it out, the result must be the same (portis
+optional)
+
+`nttp:// <Public=DNS-Name>;80`
+
+![Syntax checks](LEMPSTACK_IMAGES/9dns.png)
+
+You can leave this file in place as a temporary landing page for your. application until you set up an *index.php* file to
+replace it. Once you do that, remember to remove or rename the index.html fle from your document root, as it would
+take precedence over an index. php file by default.
+
+
+
+
+
+
+
 
 
 
