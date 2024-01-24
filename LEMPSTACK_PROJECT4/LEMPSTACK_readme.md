@@ -171,6 +171,10 @@ To exit the MySQL console, type exit in the mysql prompt:
 
 mysgl> `exit` 
 
+![Loopback address](LEMPSTACK_IMAGES/6exitsql.png)
+
+
+
 Notice that you need to provide a password to connect as the root user.
 For increased security, it's best to have dedicated user accounts with less expansive privileges set up for every database, especially if you plan on having multiple databases hosted on your server.
 
@@ -193,6 +197,8 @@ To install these 2 packages at once, run:
 
 `sudo apt install php-fpm php-mysql`
 
+![Loopback address](LEMPSTACK_IMAGES/7phpinstall.png)
+
 When prompted. type **Y**
 and press **ENTER** to confirm installation.
 
@@ -200,6 +206,36 @@ You now have.your PHP components installed. Next, you will configure Nginx to us
 # Configuring Nginx to Use PHP Processor
 
 ### Step 4 - Configuring Nginx.to Use PHP Processor
+
+When using the Nginx web server, we can create server blocks (similar to virtual hosts in Apache) to encapsulate
+configuration details and host more than one domain on a single server. In this guide, we will use **projectLEMP** as an example domain name.
+
+On Ubuntu 20.04, Nginx has one server block enabled by default and is confgured to serve documents out of a directory at **/var /www/html** .
+
+While this works well for a single site, it can become difficult to manage if you are hosting multiple
+sites. Insteadof modifying **/var/www/html** we will create a directorystructure within **/var/www** for the **your_domain**
+website, leaving **/var/www/html** in place as the default directory to be served if a client request does not match any
+other sites.
+
+Create the root web directory for your_domain as follows:
+
+`sudo-mkdir /var/www/projectLEMP`
+
+![Loopback address](LEMPSTACK_IMAGES/8mkdir.png)
+
+
+Next, assign ownership of the directory with the $USER environment variable, which will reference your current system
+user:
+
+`sudo chown $USER:$USER /yar/www/projectLEMP`
+
+![Loopback address](LEMPSTACK_IMAGES/8chown.png)
+
+Then, open a new configuration file in Nginx's **sites- available** directory using your preferred command-line editor.
+Here,we 'll use `nano`
+
+
+
 
 
 
