@@ -358,11 +358,31 @@ document root in your text editor:
 
 ![Syntax checks](LEMPSTACK_IMAGES/10infophp.png)
 
-
-w/projertlEMP/info.php
 Type or paste the following lines into the new file. This is valid PHP code that will return information about your server:
-Copy Below Code
-You.can.now,access.this.page in.your.web browset.byvisiting.the.domainname.or public;1P.address.youve setup in your
+
+'<?php 
+
+phpinfo();
+
+'
+![Syntax checks](LEMPSTACK_IMAGES/10phptags.png) 
+
+You can now access this page in your web browser by visiting the domain name.or public IP address you 've setup in your nginx configuration file followed by `/info.php`
+
+`http://server_domain_or_IP/info.php`
+
+![Syntax checks](LEMPSTACK_IMAGES/10phpserverpage.png)
+
+
+I is a best practice to remove the file created since it hs a sensitive information. So to remoe it simply run the commnd below:
+
+`sudo rm /var/www/your_domain/info.php`
+
+![Syntax checks](LEMPSTACK_IMAGES/10rmphp.png)
+
+
+
+
 
 
 
