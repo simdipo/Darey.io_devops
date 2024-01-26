@@ -380,6 +380,99 @@ I is a best practice to remove the file created since it hs a sensitive informat
 
 ![Syntax checks](LEMPSTACK_IMAGES/10rmphp.png)
 
+# Retrieving data from MySQL database with PHP
+### Step 6 - Retrieving data from MySQL database with PHP
+In this step you will create a test database (DB) with simple "To do list" and configure access to it, so the Nginx website
+would be able to query data from the DB and display it.
+
+At the time of this writing, the native MySQL PHP library mysqlnd doesn't support caching_ sha2_authentication
+the default authentication method for MySQL 8. We'll need to create a new user with the mysql native_password
+authentication method in order to be able to connect to the MySQL database from PHP.
+
+We will create a database named example_database and auser named example_user,but you can replace these names
+with different values.
+
+First, connect to the MySQL console using the root account:
+
+`sudo mysql`
+
+![Syntax checks](LEMPSTACK_IMAGES/6loginsql.png)
+
+To create a new database, run the following command from your MySQL console:
+
+`mysql> CREATE DATABASE`
+
+![Syntax checks](LEMPSTACK_IMAGES/11createdb.png)
+
+Now you can create a new user and grant him full privileges on the database you have just created.
+
+The following command creates a new.user named example user , using mysql_native_password as default
+authentication method. We're defining this user's password as *PassWord. 1* , but you should replace this value with a
+secure password of your own choosing.
+
+`mysql> CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'PassWord.1'`
+
+![Syntax checks](LEMPSTACK_IMAGES/11createuser.png)
+
+
+Now we need to give this user permission over the example database database:
+
+`mysql> GRANT ALL ON example_database.* TO 'example_user'@'%';`
+
+![Syntax checks](LEMPSTACK_IMAGES/11grant.png)
+
+
+This will give the example_user user full privileges over the example_database database, while preventing this user
+from creating or modifying other databases on your server.
+Now exit the MySQL shell with:
+
+`mysql> exit`
+
+![Syntax checks](LEMPSTACK_IMAGES/11exit.png)
+
+You can test if the new user has the proper permissions by logging in to the MySQL console again, this time using the custom user credentials.
+
+`mysql -u example_user -p`
+
+This is simply used when you -p to prompt you for password used when creating the example_user user.
+
+![Syntax checks](LEMPSTACK_IMAGES/11rootswitch.png)
+
+
+To display the database created.
+
+`show databases;`
+
+![Syntax checks](LEMPSTACK_IMAGES/11showdb.png)
+
+Next, we'll create a test table named todo list. From the MySQL console, run the following statement:
+
+`CREATE TABLE example_ database.todo_list (item id INT AUTO_INCREMENT, content VARCHAR(255),PRIMARY KEY(item_id));`
+
+![Syntax checks](LEMPSTACK_IMAGES/11createtable.png)
+
+
+Insert a few rows of content in the test table. You might want to repeat the next command S few times, using different
+VALUES:
+
+
+`mysql> INSERT INTO example database.todo list (content) VALUES ("My first important item");`
+
+![Syntax checks](LEMPSTACK_IMAGES/11insert.png)
+
+
+
+To confirm that the data was successfully saved to your table, run:
+
+`mysql> SELECT FROM example database.todo list`
+
+![Syntax checks](LEMPSTACK_IMAGES/11select.png)
+
+
+You will see the following output:
+
+![Syntax checks](LEMPSTACK_IMAGES/11select2.png)
+
 
 
 
