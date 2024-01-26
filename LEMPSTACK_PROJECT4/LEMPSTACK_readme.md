@@ -473,6 +473,32 @@ You will see the following output:
 
 ![Syntax checks](LEMPSTACK_IMAGES/11select2.png)
 
+After confirming that you have valid data in your test table, you can exit the MySQL console:
+
+`mysql> exit`
+
+![Syntax checks](LEMPSTACK_IMAGES/11exit2.png)
+
+Now you can create a PHP script that will connect to MySQL and query for your content. Create a new PHP file in your
+custom web root directory using your preferred editor. We'll use vi for that:
+
+`nano /var/www/projectLEMP/todo_list.php`
+
+The following PHP script connects to the MySQL database and quelyes for the content of the todo_list table, displays
+the results in a list. If there is a problem with the database connection, it will throw an exception.
+Copy this content into your todo list.php script:
+
+![Syntax checks](LEMPSTACK_IMAGES/11phpeditnano.png)
+
+Save and close the file when you are done editing.
+
+You can now access this page in your web browser by visiting the domain name or public IP address configured for your website, followed by `/todo_list.php`
+
+`http://<Public_domain_or_IP>/todo_list.php`
+
+![Syntax checks](LEMPSTACK_IMAGES/11browsetodolist.png)
+
+
 
 
 
