@@ -128,19 +128,19 @@ criteria will be rejected by MySOL with an error. It is safe to leave validation
 unique passwords for database credentials.
 Answer foryes, or anything else to continue without enabling.
 
-`VALIDATE PASSWORD PLUGIN can be used to test passwords and improve security. It checks the strength of password
-and allows the users to set only those passwords which are secure enough. Would you like to setup VALIDATE PASSWORD plugin?`
+*VALIDATE PASSWORD PLUGIN can be used to test passwords and improve security. It checks the strength of password
+and allows the users to set only those passwords which are secure enough. Would you like to setup VALIDATE PASSWORD plugin?*
 
 `Press y|Y for Yes, any other key for No:`
 
 If you answer "yes", you'll be asked to select a level of password validation. Keep in mind that if you enter
 2 for the strongest level, you will receive errors when attempting to set any password which does not contain numbers, upper and lowercase letters, and special characters, or which is based on common dictionary words e.g PassWord.1
 
-`There are three levels of password validation policy:
+*There are three levels of password validation policy:
 LOW    Length >= 8
 MEDIUM Length >= 8, numeric, mixed case, and special characters
 STRONG Length >= 8, numeric, mixed case, special characters and dictionary              file
-Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: 1`
+Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: 1*
 
 Regardless of whether you chose to set up the V ALIDATE PASSMORD PLUGIn , your server will next ask you to select and
 confirm a password for the MySQL root user. This is not to be confused with the system root. The database root user is
@@ -151,8 +151,8 @@ If you enabled password validation. you'll be shown the password strength for th
 your server will ask if you want to continue with that password. If you are happy with your current password, enter
 for "yes" at the prompt:
 
-`Estimated strength of the password: 100
-Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No)`
+*Estimated strength of the password: 100
+Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No)*
 
 For the rest of the questions, press
 and hit the ENTER key at each prompt. This will prompt you to change the root
@@ -172,7 +172,6 @@ To exit the MySQL console, type exit in the mysql prompt:
 mysgl> `exit` 
 
 ![Loopback address](LEMPSTACK_IMAGES/6exitsql.png)
-
 
 
 Notice that you need to provide a password to connect as the root user.
@@ -210,11 +209,11 @@ You now have.your PHP components installed. Next, you will configure Nginx to us
 When using the Nginx web server, we can create server blocks (similar to virtual hosts in Apache) to encapsulate
 configuration details and host more than one domain on a single server. In this guide, we will use **projectLEMP** as an example domain name.
 
-On Ubuntu 20.04, Nginx has one server block enabled by default and is confgured to serve documents out of a directory at **/var /www/html** .
+On Ubuntu 20.04, Nginx has one server block enabled by default and is confgured to serve documents out of a directory at */var /www/html* .
 
 While this works well for a single site, it can become difficult to manage if you are hosting multiple
-sites. Insteadof modifying **/var/www/html** we will create a directorystructure within **/var/www** for the **your_domain**
-website, leaving **/var/www/html** in place as the default directory to be served if a client request does not match any
+sites. Insteadof modifying */var/www/html* we will create a directorystructure within */var/www* for the *your_domain*
+website, leaving */var/www/html* in place as the default directory to be served if a client request does not match any
 other sites.
 
 Create the root web directory for your_domain as follows:
@@ -231,8 +230,8 @@ user:
 
 ![Loopback address](LEMPSTACK_IMAGES/8chown.png)
 
-Then, open a new configuration file in Nginx's **sites- available** directory using your preferred command-line editor.
-Here,we 'll use `nano`
+Then, open a new configuration file in Nginx's *sites- available* directory using your preferred command-line editor.
+Here,w will use `nano`
 
 `sudo nano /etc/nginx/sites-available/projectLEMP` 
 
@@ -365,20 +364,20 @@ Type or paste the following lines into the new file. This is valid PHP code that
 phpinfo();
 
 '
-![Syntax checks](LEMPSTACK_IMAGES/10phptags.png) 
+![php tags](LEMPSTACK_IMAGES/10phptags.png) 
 
 You can now access this page in your web browser by visiting the domain name.or public IP address you 've setup in your nginx configuration file followed by `/info.php`
 
 `http://server_domain_or_IP/info.php`
 
-![Syntax checks](LEMPSTACK_IMAGES/10phpserverpage.png)
+![php info page](LEMPSTACK_IMAGES/10phpserverpage.png)
 
 
-I is a best practice to remove the file created since it hs a sensitive information. So to remoe it simply run the commnd below:
+It is a best practice to remove the file created since it hs a sensitive information. So to remoe it simply run the commnd below:
 
 `sudo rm /var/www/your_domain/info.php`
 
-![Syntax checks](LEMPSTACK_IMAGES/10rmphp.png)
+![remove info.php](LEMPSTACK_IMAGES/10rmphp.png)
 
 # Retrieving data from MySQL database with PHP
 ### Step 6 - Retrieving data from MySQL database with PHP
@@ -396,13 +395,13 @@ First, connect to the MySQL console using the root account:
 
 `sudo mysql`
 
-![Syntax checks](LEMPSTACK_IMAGES/6loginsql.png)
+![Sql login](LEMPSTACK_IMAGES/6loginsql.png)
 
 To create a new database, run the following command from your MySQL console:
 
 `mysql> CREATE DATABASE`
 
-![Syntax checks](LEMPSTACK_IMAGES/11createdb.png)
+![sql database creation](LEMPSTACK_IMAGES/11createdb.png)
 
 Now you can create a new user and grant him full privileges on the database you have just created.
 
@@ -412,14 +411,14 @@ secure password of your own choosing.
 
 `mysql> CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'PassWord.1'`
 
-![Syntax checks](LEMPSTACK_IMAGES/11createuser.png)
+![Sql user creation](LEMPSTACK_IMAGES/11createuser.png)
 
 
 Now we need to give this user permission over the example database database:
 
 `mysql> GRANT ALL ON example_database.* TO 'example_user'@'%';`
 
-![Syntax checks](LEMPSTACK_IMAGES/11grant.png)
+![grant acces in sql database](LEMPSTACK_IMAGES/11grant.png)
 
 
 This will give the example_user user full privileges over the example_database database, while preventing this user
@@ -428,7 +427,7 @@ Now exit the MySQL shell with:
 
 `mysql> exit`
 
-![Syntax checks](LEMPSTACK_IMAGES/11exit.png)
+![Sql exit](LEMPSTACK_IMAGES/11exit.png)
 
 You can test if the new user has the proper permissions by logging in to the MySQL console again, this time using the custom user credentials.
 
@@ -436,20 +435,20 @@ You can test if the new user has the proper permissions by logging in to the MyS
 
 This is simply used when you -p to prompt you for password used when creating the example_user user.
 
-![Syntax checks](LEMPSTACK_IMAGES/11rootswitch.png)
+![login sql with password](LEMPSTACK_IMAGES/11rootswitch.png)
 
 
 To display the database created.
 
 `show databases;`
 
-![Syntax checks](LEMPSTACK_IMAGES/11showdb.png)
+![show databases in sql](LEMPSTACK_IMAGES/11showdb.png)
 
 Next, we'll create a test table named todo list. From the MySQL console, run the following statement:
 
 `CREATE TABLE example_ database.todo_list (item id INT AUTO_INCREMENT, content VARCHAR(255),PRIMARY KEY(item_id));`
 
-![Syntax checks](LEMPSTACK_IMAGES/11createtable.png)
+![create tables in sql](LEMPSTACK_IMAGES/11createtable.png)
 
 
 Insert a few rows of content in the test table. You might want to repeat the next command S few times, using different
@@ -458,7 +457,7 @@ VALUES:
 
 `mysql> INSERT INTO example database.todo list (content) VALUES ("My first important item");`
 
-![Syntax checks](LEMPSTACK_IMAGES/11insert.png)
+![Sql insert](LEMPSTACK_IMAGES/11insert.png)
 
 
 
@@ -466,18 +465,18 @@ To confirm that the data was successfully saved to your table, run:
 
 `mysql> SELECT FROM example database.todo list`
 
-![Syntax checks](LEMPSTACK_IMAGES/11select.png)
+![Select from syntax](LEMPSTACK_IMAGES/11select.png)
 
 
 You will see the following output:
 
-![Syntax checks](LEMPSTACK_IMAGES/11select2.png)
+![SQL SELECT](LEMPSTACK_IMAGES/11select2.png)
 
 After confirming that you have valid data in your test table, you can exit the MySQL console:
 
 `mysql> exit`
 
-![Syntax checks](LEMPSTACK_IMAGES/11exit2.png)
+![exit](LEMPSTACK_IMAGES/11exit2.png)
 
 Now you can create a PHP script that will connect to MySQL and query for your content. Create a new PHP file in your
 custom web root directory using your preferred editor. We'll use vi for that:
@@ -488,7 +487,7 @@ The following PHP script connects to the MySQL database and quelyes for the cont
 the results in a list. If there is a problem with the database connection, it will throw an exception.
 Copy this content into your todo list.php script:
 
-![Syntax checks](LEMPSTACK_IMAGES/11phpeditnano.png)
+![nano pages edited](LEMPSTACK_IMAGES/11phpeditnano.png)
 
 Save and close the file when you are done editing.
 
@@ -496,7 +495,7 @@ You can now access this page in your web browser by visiting the domain name or 
 
 `http://<Public_domain_or_IP>/todo_list.php`
 
-![Syntax checks](LEMPSTACK_IMAGES/11browsetodolist.png)
+![todo list implemented](LEMPSTACK_IMAGES/11browsetodolist.png)
 
 
 
