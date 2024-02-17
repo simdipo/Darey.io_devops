@@ -22,13 +22,14 @@ directly from the command line or called from other scripts.
 Example: Assigning value to a variable:
 
 `name-"John"`
-![Change directory](SHELL_SCRIPT_IMAGES_IMAGES/1.png)
-
+![Images](SHELL_SCRIPT_IMAGES/1.PNG)
 
 
 Example: Retrieving value from a variable:
-Copy Below Code
-echo $name
+
+`echo $name`
+![Images](SHELL_SCRIPT_IMAGES/2.PNG)
+
 2. Control Flow: Bash provides control flow statements like if-else, for loops, while loops, and case statements to
 control the flow of execution in your scripts. These statements allow you to make decisions, iterate over lists,and
 execute different commands based on conditions.
