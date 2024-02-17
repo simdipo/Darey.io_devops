@@ -18,3 +18,18 @@ create a shell script by saving a collection of commands in a text file with a .
 directly from the command line or called from other scripts.
 ## Shell Scripting Syntax Elements
 1. Variables: Bash allows you to define and work with variables. Variables can store data of various types such as numbers, strings and arrays. You can assign values to variable using the = operator, and access their values using the variable name preceeded by a $ sign.
+
+Example: Assigning value to a variable:
+
+`name-"John"`
+![Change directory](SHELL_SCRIPT_IMAGES_IMAGES/1.png)
+
+
+
+Example: Retrieving value from a variable:
+Copy Below Code
+echo $name
+2. Control Flow: Bash provides control flow statements like if-else, for loops, while loops, and case statements to
+control the flow of execution in your scripts. These statements allow you to make decisions, iterate over lists,and
+execute different commands based on conditions.
+Example: Using if-else to execute script based on a conditions
