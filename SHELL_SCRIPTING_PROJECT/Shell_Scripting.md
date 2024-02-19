@@ -34,3 +34,20 @@ Example: Retrieving value from a variable:
 control the flow of execution in your scripts. These statements allow you to make decisions, iterate over lists,and
 execute different commands based on conditions.
 Example: Using if-else to execute script based on a conditions
+
+`#!/bin/bash
+Example script to check if a number is positive, negative, or zero
+read -p "Enter a number:
+num
+if [ $num -gt 0 ]; then
+echo "The number is positive.
+elif [ $num -lt 0 ]; then
+echo "The number is negative.
+else
+echo "The number is zero.
+fi
+`
+
+The piece of code prompts you to type a number and prints a statement stating the number is
+
+Example: Iterating through a list using a for loop
