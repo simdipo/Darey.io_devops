@@ -35,19 +35,99 @@ control the flow of execution in your scripts. These statements allow you to mak
 execute different commands based on conditions.
 Example: Using if-else to execute script based on a conditions
 
-`#!/bin/bash
-Example script to check if a number is positive, negative, or zero
-read -p "Enter a number:
-num
-if [ $num -gt 0 ]; then
-echo "The number is positive.
-elif [ $num -lt 0 ]; then
-echo "The number is negative.
-else
-echo "The number is zero.
-fi
-`
+`#!/bin/bash`
+
+`#Example script to check if a number is positive, negative, or zero`
+
+`read -p "Enter a number:`
+`num`
+`if [ $num -gt 0 ]; then`
+
+`echo "The number is positive."`
+
+`elif [ $num -lt 0 ]; then`
+
+`echo "The number is negative."`
+
+`else`
+
+`echo "The number is zero."`
+
+`fi`
 
 The piece of code prompts you to type a number and prints a statement stating the number is
 
 Example: Iterating through a list using a for loop
+`#!/bin/bash`
+
+ `#Example script to print numbers from 1 to 5 using a for loop` `
+
+`for (( i=1; i<=5; i++ ))`
+
+`do`
+    `echo $i`
+`done`
+`
+![Images](SHELL_SCRIPT_IMAGES/1p.PNG)
+
+3. Command Substitution: Command substitution allows you to capture the output of a command and use it as a
+value within your script. You can use the backtick or the $()syntax for command substitution.
+
+Example: Using backtick for command substitution
+
+`current date= date +%Y-%m-%d`
+
+
+Example: Using $() syntax for command substitution
+
+`current date: $(date +%Y-%m-%d)`
+
+4. Input and Output: Bash provides various ways to handle input and output. You can use the read command to
+accept user input, and output text to the console using the echo command. Additionahy, you can redirect input
+and output using operators like > (output to a file), < (input from a file), and I (pipe the output of one command as input to another).
+
+Example: Accept user input
+
+`echo "Enter your name`
+
+`read name`
+
+Example: Output text to the terminal
+
+`echo "Hello Wor1d"`
+
+Example: Out the result of a command into a file
+
+`echo "hello world"> index.txt`
+
+Example: Pass the content of a file as input to a command
+
+`grep "pattern" < input.txt`
+
+Example: pass the result of a command as input to another command
+
+`echo "hello world" | grep "pattern'`
+
+5. Functions: Bash allows you to define and use functions to group related commands together. Functions provide a way to modularize your code and make it more reusable. You can define functions using the function keyword or simply by declaring the function name followed by parentheses.
+
+`#!/bin/bash`
+
+Define a function to greet the user
+greet() 
+{
+      echo "Hello, $1! Nice to meet you." 
+}
+
+Call the greet function and pass the nanc as an argunent
+greet "John" 
+
+`
+
+
+
+Lets write our First Shell Script
+step 1:0n your terminal open a foller called shell-s tsipting using the command akdir shell- scripting Thiswil hold all the script wewill write in this lesson.
+step2:create a flecalled user-inputishusing thecommand touchuser-Snput.st
+step.3: Insidethe file copyand paste the block of code below:
+DLL
+1
