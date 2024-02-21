@@ -123,11 +123,11 @@ greet "John"
 
 `
 
-
-
 Lets write our First Shell Script
-step 1:0n your terminal open a foller called shell-s tsipting using the command akdir shell- scripting Thiswil hold all the script wewill write in this lesson.
-step2:create a flecalled user-inputishusing thecommand touchuser-Snput.st
+step 1:0n your terminal open a foller called shell-scripting using the command mkkdir shell- scripting This wil hold all the script we will write in this lesson.
+
+step2:create a file called user-inputishusing the command touch user-input.sh
+
 step.3: Insidethe file copyand paste the block of code below:
 DLL
 1
