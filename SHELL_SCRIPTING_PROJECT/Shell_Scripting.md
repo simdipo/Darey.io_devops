@@ -124,10 +124,54 @@ greet "John"
 `
 
 Lets write our First Shell Script
-step 1:0n your terminal open a foller called shell-scripting using the command mkkdir shell- scripting This wil hold all the script we will write in this lesson.
+step 1:0n your terminal open a folder called shell-scripting using the command mkkdir shell- scripting This wil hold all the script we will write in this lesson.
 
-step2:create a file called user-inputishusing the command touch user-input.sh
+step2:create a file called user-input sh using the command touch `user-input.sh`
 
-step.3: Insidethe file copyand paste the block of code below:
-DLL
-1
+step.3: Inside the file copyand paste the block of code below:
+
+
+`#!/bin/bash
+
+`Prompt the user for their name
+echo "Enter your name:"
+read name`
+
+`Display a greeting with the entered name
+echo "Hello, $name! Nice to meet you."
+`
+
+A litle bit about the code block. The script prompts for your name. When you type your name, it displays the text hello!
+Nice to meet you. Also t!/bin/bash helps you specify the type of bash interpreter to be used to execute the script.
+step 4: save your file
+step 5:Run the command sudo chmod +x user-input.sh this makes the file executable
+step 6: Run the script using the command. user-input.sh
+Additional Resources
+If you like text based learning material, this guide will be of help Learn-Shell-Scripting
+Visit this link to learn shell scripting in an interactive environment for free.
+
+# Directory Manipulation and Naxigation
+## Directory Manipulation and Navigation
+On the back of your lessons on Directory Manipulation and Navigation of Linux fle system, We will be writing a simple
+shell script as a way of practicing what we learnt.
+This script will display the current directory, create a new directory called "my_directory," change to that directory
+create two files inside it, list the files, move back one level up, remove the"my_directory" and its contents, and finally list the file in the current directory again.
+
+Proceed by the steps below.
+Step 1. Open a file name navigating-linux-filesystems.sh
+
+Step 2. Paste the code below into you file.
+
+step 3: Run the command sudo chmod x navigating-linux-filesystem.sh to set execute permission on the file
+step 4: Run your script using this command ./navigating-linux-filesystem.sh
+
+# File Operations and Sorting
+## File Operations and Sorting
+In this lesson, we will be writing a simple shell script that focuses on File Operations and Sorting.
+This script creates three files (file1.txt, file2.txt, and file3.txt), displays the files in theur current order, sorts them
+alphabetically, saves the sorted files in sorted_files.txt, displays the sorted files, removes the original files, renames the
+sorted file to sorted_files_sorted_alphabetically.txt, and finally displays the contents of the final sorted file.
+Lets proceed using the steps below:
+step 1: Open your terminal and create a file called sorting.sh using the command t ouch sorting. sh
+step 2: Copy and paste the code block below into the file.
+
