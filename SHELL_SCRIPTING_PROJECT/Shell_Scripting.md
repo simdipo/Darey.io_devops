@@ -175,3 +175,84 @@ Lets proceed using the steps below:
 step 1: Open your terminal and create a file called sorting.sh using the command t ouch sorting. sh
 step 2: Copy and paste the code block below into the file.
 
+step 3: Set execute permission on sorting.sh using this command sudo chamod xsorting.sh
+step 4: Run your script using the command ./sorting.sh
+Working with Numbers and Calculations
+Working with Numbers and Calculations
+This script defines two variables num1 and num2 with numeric values, performs basic arithmetic operations (addition,
+subtraction, multiplication, division, and modulus), and displays the results. It also performs more complex calculations
+such as raising num1 to the power of 2 and calculating the square root of num2, and displays those results as well.
+Lets proceed by following the steps below:
+step 1: On your terminal create a file called calculations.sh using the command touch calculations.sh
+step 2: Copy and paste the code block below:
+
+#!/bin/bash
+
+# Define two variables with numeric values
+num1=10
+num2=5
+
+# Perform basic arithmetic operations
+sum=$((num1 + num2))
+difference=$((num1 - num2))
+product=$((num1 * num2))
+quotient=$((num1 / num2))
+remainder=$((num1 % num2))
+
+# Display the results
+echo "Number 1: $num1"
+echo "Number 2: $num2"
+echo "Sum: $sum"
+echo "Difference: $difference"
+echo "Product: $product"
+echo "Quotient: $quotient"
+echo "Remainder: $remainder"
+
+# Perform some more complex calculations
+power_of_2=$((num1 ** 2))
+square_root=$(echo "sqrt($num2)" | bc)
+
+# Display the results
+echo "Number 1 raised to the power of 2: $power_of_2"
+echo "Square root of number 2: $square_root"
+
+step 3: Set execute permision on calculations.' .sh using the command: sudo chmod +x calculations.sh
+step 4: Run your script using this command:
+calculations.sh
+File Backup and Timestamping
+File Backup and Timestamping
+This shell scripting example is focused on file backup and timestamp. As a DevOps Engineer backing up databases and
+other storage devices is one of the most common task you get to carryout.
+This script defines the source directory and backup directory paths. It then creates a timestamp using the current date
+and time, and creates a backup directory with the timestamp appended to its name. The script then copies all files from
+the source directory to the backup directory using the cp.command with the - r option for recursive copying. Finally,it
+displays a message indicating the completion of the backup process and shows the path of the backup directory with the
+timestamp.
+Lets proceed using the steps bellow:
+step 1: On your terminal open a file backup.sh using the command touch backup.sh
+step 2: Copy and paste the code block below into the file,
+
+`#!/bin/bash`
+
+`#Define the source directory and backup directory
+source_dir="/path/to/source_directory"
+backup_dir="/path/to/backup_directory"`
+
+`#Create a timestamp with the current date and time
+timestamp=$(date +"%Y%m%d%H%M%S")`
+
+`#Create a backup directory with the timestamp
+backup_dir_with_timestamp="$backup_dir/backup_$timestamp"`
+
+`#Create the backup directory`
+`mkdir -p "$backup_dir_with_timestamp"`
+
+`Copy all files from the source directory to the backup directory
+cp -r "$source_dir"/* "$backup_dir_with_timestamp"`
+
+`#Display a message indicating the backup process is complete
+echo "Backup completed. Files copied to: $backup_dir_with_timestamp"`
+
+step 3:Set execute permission on backup.sh using this command `sudo chmod +x backup.sh`
+
+step 4: Run your script using the command: `./backup.sh`
