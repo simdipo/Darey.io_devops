@@ -69,7 +69,7 @@ Example: Iterating through a list using a for loop
 `do`
     `echo $i`
 `done`
-`
+
 ![Images](SHELL_SCRIPT_IMAGES/1p.PNG)
 
 3. Command Substitution: Command substitution allows you to capture the output of a command and use it as a
@@ -123,7 +123,7 @@ Example: pass the result of a command as input to another command
 
 `{`
 
-      echo "Hello, $1! Nice to meet you."
+    echo "Hello, $1! Nice to meet you."
 `}`
 
 Call the greet function and pass the name as an argunent
