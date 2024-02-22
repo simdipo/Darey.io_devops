@@ -92,13 +92,17 @@ Example: Accept user input
 
 `read name`
 
+![Read name](SHELL_SCRIPT_IMAGES/readname.PNG)
+
 Example: Output text to the terminal
 
 `echo "Hello Wor1d"`
+![Images](SHELL_SCRIPT_IMAGES/Helloworld.PNG)
 
 Example: Out the result of a command into a file
 
-`echo "hello world"> index.txt`
+`echo "hello world" > index.txt`
+![Images](SHELL_SCRIPT_IMAGES/
 
 Example: Pass the content of a file as input to a command
 
