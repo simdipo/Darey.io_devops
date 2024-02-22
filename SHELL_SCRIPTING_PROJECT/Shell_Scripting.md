@@ -22,12 +22,14 @@ directly from the command line or called from other scripts.
 Example: Assigning value to a variable:
 
 `name-"John"`
+
 ![Images](SHELL_SCRIPT_IMAGES/1.PNG)
 
 
 Example: Retrieving value from a variable:
 
 `echo $name`
+
 ![Images](SHELL_SCRIPT_IMAGES/2.PNG)
 
 2. Control Flow: Bash provides control flow statements like if-else, for loops, while loops, and case statements to
@@ -102,7 +104,8 @@ Example: Output text to the terminal
 Example: Out the result of a command into a file
 
 `echo "hello world" > index.txt`
-![Images](SHELL_SCRIPT_IMAGES/
+![Images](SHELL_SCRIPT_IMAGES/Helloworld1.PNG)
+
 
 Example: Pass the content of a file as input to a command
 
@@ -116,26 +119,27 @@ Example: pass the result of a command as input to another command
 
 `#!/bin/bash`
 
-Define a function to greet the user
-greet() 
-{
-      echo "Hello, $1! Nice to meet you." 
-}
+`Define a function to greet the user greet()`
 
-Call the greet function and pass the nanc as an argunent
+`{`
+
+      echo "Hello, $1! Nice to meet you."
+`}`
+
+Call the greet function and pass the name as an argunent
 greet "John" 
 
-`
 
 Lets write our First Shell Script
-step 1:0n your terminal open a folder called shell-scripting using the command mkkdir shell- scripting This wil hold all the script we will write in this lesson.
 
-step2:create a file called user-input sh using the command touch `user-input.sh`
+step 1: 0n your terminal open a folder called shell-scripting using the command mkkdir shell- scripting This wil hold all the script we will write in this lesson.
 
-step.3: Inside the file copyand paste the block of code below:
+step 2: create a file called user-input sh using the command touch `user-input.sh`
+
+step 3: Inside the file copyand paste the block of code below:
 
 
-`#!/bin/bash
+`#!/bin/bash`
 
 `Prompt the user for their name
 echo "Enter your name:"
@@ -146,10 +150,14 @@ echo "Hello, $name! Nice to meet you."
 `
 
 A litle bit about the code block. The script prompts for your name. When you type your name, it displays the text hello!
-Nice to meet you. Also t!/bin/bash helps you specify the type of bash interpreter to be used to execute the script.
+Nice to meet you. Also #!/bin/bash helps you specify the type of bash interpreter to be used to execute the script.
+
 step 4: save your file
+
 step 5:Run the command sudo chmod +x user-input.sh this makes the file executable
-step 6: Run the script using the command. user-input.sh
+
+step 6: Run the script using the command. `user-input.sh`
+
 Additional Resources
 If you like text based learning material, this guide will be of help Learn-Shell-Scripting
 Visit this link to learn shell scripting in an interactive environment for free.
@@ -165,52 +173,110 @@ Proceed by the steps below.
 Step 1. Open a file name navigating-linux-filesystems.sh
 
 Step 2. Paste the code below into you file.
+`#!/bin/bash`
+
+`#Display current directory
+echo "Current directory: $PWD"`
+
+`#Create a new directory
+echo "Creating a new directory..."
+mkdir my_directory
+echo "New directory created."`
+
+`#Change to the new directory
+echo "Changing to the new directory..."
+cd my_directory
+echo "Current directory: $PWD"`
+
+`#Create some files
+echo "Creating files..."
+touch file1.txt
+touch file2.txt
+echo "Files created."`
+
+`#List the files in the current directory
+echo "Files in the current directory:"
+ls`
+
+`#Move one level up
+echo "Moving one level up..."
+cd ..
+echo "Current directory: $PWD"`
+
+`#Remove the new directory and its contents
+echo "Removing the new directory..."
+rm -rf my_directory
+echo "Directory removed."`
+
+`#List the files in the current directory again
+echo "Files in the current directory:"
+ls`
 
 step 3: Run the command sudo chmod x navigating-linux-filesystem.sh to set execute permission on the file
-step 4: Run your script using this command ./navigating-linux-filesystem.sh
+
+step 4: Run your script using this command `./navigating-linux-filesystem.sh`
+
+![Images](SHELL_SCRIPT_IMAGES/navigate.PNG)
 
 # File Operations and Sorting
 ## File Operations and Sorting
 In this lesson, we will be writing a simple shell script that focuses on File Operations and Sorting.
-This script creates three files (file1.txt, file2.txt, and file3.txt), displays the files in theur current order, sorts them
-alphabetically, saves the sorted files in sorted_files.txt, displays the sorted files, removes the original files, renames the
-sorted file to sorted_files_sorted_alphabetically.txt, and finally displays the contents of the final sorted file.
+
+This script creates three files (file1.txt, file2.txt, and file3.txt), displays the files in theur current order, sorts them alphabetically, saves the sorted files in sorted_files.txt, displays the sorted files, removes the original files, renames the sorted file to sorted_files_sorted_alphabetically.txt, and finally displays the contents of the final sorted file.
+
 Lets proceed using the steps below:
-step 1: Open your terminal and create a file called sorting.sh using the command t ouch sorting. sh
+
+step 1: Open your terminal and create a file called sorting.sh using the command 
+`touch sorting.sh`
+
 step 2: Copy and paste the code block below into the file.
 
-step 3: Set execute permission on sorting.sh using this command sudo chamod xsorting.sh
-step 4: Run your script using the command ./sorting.sh
+step 3: Set execute permission on sorting.sh using this command `sudo chmod +x sorting.sh`
+
+step 4: Run your script using the command `./sorting.sh`
 Working with Numbers and Calculations
 Working with Numbers and Calculations
 This script defines two variables num1 and num2 with numeric values, performs basic arithmetic operations (addition,
 subtraction, multiplication, division, and modulus), and displays the results. It also performs more complex calculations
 such as raising num1 to the power of 2 and calculating the square root of num2, and displays those results as well.
+
 Lets proceed by following the steps below:
+
 step 1: On your terminal create a file called calculations.sh using the command touch calculations.sh
+
 step 2: Copy and paste the code block below:
 
-#!/bin/bash
+`#!/bin/bash`
 
-# Define two variables with numeric values
-num1=10
-num2=5
+`#Define two variables with numeric values`
 
-# Perform basic arithmetic operations
-sum=$((num1 + num2))
+`num1=10`
+
+`num2=5` 
+
+`#Perform basic arithmetic operations`
+`sum=$((num1 + num2))
 difference=$((num1 - num2))
 product=$((num1 * num2))
 quotient=$((num1 / num2))
-remainder=$((num1 % num2))
+remainder=$((num1 % num2))`
 
-# Display the results
-echo "Number 1: $num1"
-echo "Number 2: $num2"
-echo "Sum: $sum"
-echo "Difference: $difference"
-echo "Product: $product"
-echo "Quotient: $quotient"
-echo "Remainder: $remainder"
+`#Display the results`
+
+`echo "Number 1: $num1"`
+
+`echo "Number 2: $num2"`
+
+`echo "Sum: $sum"`
+
+`echo "Difference: $difference"`
+
+`echo "Product: $product"`
+
+`echo "Quotient: $quotient"`
+
+`echo "Remainder: $remainder"`
+
 
 # Perform some more complex calculations
 power_of_2=$((num1 ** 2))
