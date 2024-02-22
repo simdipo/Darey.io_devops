@@ -57,6 +57,8 @@ Example: Using if-else to execute script based on a conditions
 
 `fi`
 
+![Images](SHELL_SCRIPT_IMAGES/positive.PNG)
+
 The piece of code prompts you to type a number and prints a statement stating the number is
 
 Example: Iterating through a list using a for loop
