@@ -252,6 +252,12 @@ step 2: Copy and paste the code block below into the file.
 step 3: Set execute permission on sorting.sh using this command `sudo chmod +x sorting.sh`
 
 step 4: Run your script using the command `./sorting.sh`
+
+![Images](SHELL_SCRIPT_IMAGES/sorting1.png)
+![Images](SHELL_SCRIPT_IMAGES/sorting2.png)
+![Images](SHELL_SCRIPT_IMAGES/sorting3.png)
+
+
 Working with Numbers and Calculations
 Working with Numbers and Calculations
 This script defines two variables num1 and num2 with numeric values, performs basic arithmetic operations (addition,
