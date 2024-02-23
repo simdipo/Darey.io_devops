@@ -14,10 +14,10 @@ that does the job of cloning the 1000 repositories. We call it once and the job 
 agalin whenever we are signed same task.
 
 Bash scripts are essentially a series of comnmands and instructions that are executed sequentially in a shell. You can
-create a shell script by saving a collection of commands in a text file with a .sh extension. These scripts can be executed
-directly from the command line or called from other scripts.
+create a shell script by saving a collection of commands in a text file with a `.sh` extension. These scripts can be executed directly from the command line or called from other scripts.
 
 ## Shell Scripting Syntax Elements
+
 1. Variables: Bash allows you to define and work with variables. Variables can store data of various types such as numbers, strings and arrays. You can assign values to variable using the = operator, and access their values using the variable name preceeded by a $ sign.
 
 Example: Assigning value to a variable:
@@ -41,10 +41,12 @@ Example: Using if-else to execute script based on a conditions
 
 `#!/bin/bash`
 
-`#Example script to check if a number is positive, negative, or zero`
+#Example script to check if a number is positive, negative, or zero
 
 `read -p "Enter a number:`
+
 `num`
+
 `if [ $num -gt 0 ]; then`
 
 `echo "The number is positive."`
@@ -214,7 +216,7 @@ Step 2. Paste the code below into you file.
 
 #Change to the new directory
 
-`echo "Changing to the new directory..."
+`echo "Changing to the new directory..."`
 
 `cd my_directory`
 
@@ -246,7 +248,7 @@ Step 2. Paste the code below into you file.
 
 #Remove the new directory and its contents
 
-`echo "Removing the new directory..."
+`echo "Removing the new directory..."`
 
 `rm -rf my_directory`
 
@@ -309,22 +311,34 @@ step 2: Copy and paste the code block below into the file.
 `echo "Files sorted."`
 
 #Display the sorted files
-echo "Sorted files:"
-cat sorted_files.txt
+
+`echo "Sorted files:"`
+
+`cat sorted_files.txt`
 
 #Remove the original files
-echo "Removing original files..."
-rm file1.txt file2.txt file3.txt
-echo "Original files removed."
+
+`echo "Removing original files..."`
+
+`rm file1.txt file2.txt file3.txt`
+
+`echo "Original files removed."`
 
 #Rename the sorted file to a more descriptive name
-echo "Renaming sorted file..."
-mv sorted_files.txt sorted_files_sorted_alphabetically.txt
-echo "File renamed."
+
+`echo "Renaming sorted file..."`
+
+`mv sorted_files.txt`
+
+`sorted_files_sorted_alphabetically.txt`
+
+`echo "File renamed."`
 
 #Display the final sorted file
-echo "Final sorted file:"
-cat sorted_files_sorted_alphabetically.txt
+
+`echo "Final sorted file:"`
+
+`cat sorted_files_sorted_alphabetically.txt`
 
 
 step 3: Set execute permission on sorting.sh using this command 
