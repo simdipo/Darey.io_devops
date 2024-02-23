@@ -26,16 +26,17 @@ Example: Assigning value to a variable:
 
 ![Images](SHELL_SCRIPT_IMAGES/1.PNG)
 
-
 Example: Retrieving value from a variable:
 
 `echo $name`
 
 ![Images](SHELL_SCRIPT_IMAGES/2.PNG)
 
+
 2. Control Flow: Bash provides control flow statements like if-else, for loops, while loops, and case statements to
 control the flow of execution in your scripts. These statements allow you to make decisions, iterate over lists,and
 execute different commands based on conditions.
+
 Example: Using if-else to execute script based on a conditions
 
 `#!/bin/bash`
@@ -103,11 +104,14 @@ Example: Output text to the terminal
 `echo "Hello Wor1d"`
 ![Images](SHELL_SCRIPT_IMAGES/Helloworld.PNG)
 
+
 Example: Out the result of a command into a file
 
 `echo "hello world" > index.txt`
 
+
 ![Images](SHELL_SCRIPT_IMAGES/Helloworld1.PNG)
+
 
 
 Example: Pass the content of a file as input to a command
@@ -174,13 +178,18 @@ Visit this link to learn shell scripting in an interactive environment for free.
 ## Directory Manipulation and Navigation
 On the back of your lessons on Directory Manipulation and Navigation of Linux fle system, We will be writing a simple
 shell script as a way of practicing what we learnt.
+
 This script will display the current directory, create a new directory called "my_directory," change to that directory
 create two files inside it, list the files, move back one level up, remove the"my_directory" and its contents, and finally list the file in the current directory again.
 
 Proceed by the steps below.
-Step 1. Open a file name navigating-linux-filesystems.sh
+
+Step 1. Open a file name 
+
+`navigating-linux-filesystems.sh`
 
 Step 2. Paste the code below into you file.
+
 `#!/bin/bash`
 
 `#Display current directory
