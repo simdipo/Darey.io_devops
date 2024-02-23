@@ -16,6 +16,7 @@ agalin whenever we are signed same task.
 Bash scripts are essentially a series of comnmands and instructions that are executed sequentially in a shell. You can
 create a shell script by saving a collection of commands in a text file with a .sh extension. These scripts can be executed
 directly from the command line or called from other scripts.
+
 ## Shell Scripting Syntax Elements
 1. Variables: Bash allows you to define and work with variables. Variables can store data of various types such as numbers, strings and arrays. You can assign values to variable using the = operator, and access their values using the variable name preceeded by a $ sign.
 
@@ -81,7 +82,6 @@ Example: Using backtick for command substitution
 
 `current date= date +%Y-%m-%d`
 
-
 Example: Using $() syntax for command substitution
 
 `current date: $(date +%Y-%m-%d)`
@@ -106,6 +106,7 @@ Example: Output text to the terminal
 Example: Out the result of a command into a file
 
 `echo "hello world" > index.txt`
+
 ![Images](SHELL_SCRIPT_IMAGES/Helloworld1.PNG)
 
 
@@ -127,6 +128,8 @@ Example: pass the result of a command as input to another command
 
     echo "Hello, $1! Nice to meet you."
 `}`
+
+![Images](SHELL_SCRIPT_IMAGES/greet.PNG)
 
 Call the greet function and pass the name as an argunent
 greet "John" 
@@ -156,7 +159,7 @@ Nice to meet you. Also #!/bin/bash helps you specify the type of bash interprete
 
 step 4: save your file
 
-step 5:Run the command sudo chmod +x user-input.sh this makes the file executable
+step 5:  Run the command sudo chmod +x user-input.sh this makes the file executable
 
 step 6: Run the script using the command. `user-input.sh`
 
@@ -280,28 +283,44 @@ remainder=$((num1 % num2))`
 `echo "Remainder: $remainder"`
 
 
-# Perform some more complex calculations
+## Perform some more complex calculations
 power_of_2=$((num1 ** 2))
 square_root=$(echo "sqrt($num2)" | bc)
 
-# Display the results
-echo "Number 1 raised to the power of 2: $power_of_2"
-echo "Square root of number 2: $square_root"
+## Display the results
+`echo "Number 1 raised to the power of 2: $power_of_2"`
 
-step 3: Set execute permision on calculations.' .sh using the command: sudo chmod +x calculations.sh
+
+`echo "Square root of number 2: $square_root"`
+
+step 3: Set execute permision on calculations.' .sh using the command:
+
+`sudo chmod +x calculations.sh`
+
 step 4: Run your script using this command:
-calculations.sh
-File Backup and Timestamping
-File Backup and Timestamping
+
+`calculations.sh`
+
+![Images](SHELL_SCRIPT_IMAGES/calculations.PNG)
+
+# File Backup and Timestamping
+## File Backup and Timestamping
 This shell scripting example is focused on file backup and timestamp. As a DevOps Engineer backing up databases and
-other storage devices is one of the most common task you get to carryout.
+other storage devices is one of the most common task you get to carry out.
 This script defines the source directory and backup directory paths. It then creates a timestamp using the current date
-and time, and creates a backup directory with the timestamp appended to its name. The script then copies all files from
-the source directory to the backup directory using the cp.command with the - r option for recursive copying. Finally,it
-displays a message indicating the completion of the backup process and shows the path of the backup directory with the
+and time, and creates a backup directory with the timestamp appended to its name. 
+
+The script then copies all files from
+the source directory to the backup directory using the cp.command with the - r option for recursive copying. 
+
+Finally, it displays a message indicating the completion of the backup process and shows the path of the backup directory with the
 timestamp.
-Lets proceed using the steps bellow:
-step 1: On your terminal open a file backup.sh using the command touch backup.sh
+Lets proceed using the steps below:
+
+step 1: On your terminal open a file backup.sh using the command 
+
+`touch backup.sh`
+
 step 2: Copy and paste the code block below into the file,
 
 `#!/bin/bash`
@@ -325,6 +344,12 @@ cp -r "$source_dir"/* "$backup_dir_with_timestamp"`
 `#Display a message indicating the backup process is complete
 echo "Backup completed. Files copied to: $backup_dir_with_timestamp"`
 
-step 3:Set execute permission on backup.sh using this command `sudo chmod +x backup.sh`
+step 3: Set execute permission on backup.sh using this command
 
-step 4: Run your script using the command: `./backup.sh`
+`sudo chmod +x backup.sh`
+
+step 4: Run your script using the command: 
+
+`./backup.sh`
+
+![Images](SHELL_SCRIPT_IMAGES)
