@@ -73,7 +73,7 @@ Example: Iterating through a list using a for loop
     `echo $i`
 `done`
 
-![Images](SHELL_SCRIPT_IMAGES/1p.PNG)
+![Images](SHELL_SCRIPT_IMAGES/count.PNG)
 
 3. Command Substitution: Command substitution allows you to capture the output of a command and use it as a
 value within your script. You can use the backtick or the $()syntax for command substitution.
@@ -139,10 +139,11 @@ Lets write our First Shell Script
 
 step 1: 0n your terminal open a folder called shell-scripting using the command mkkdir shell- scripting This wil hold all the script we will write in this lesson.
 
-step 2: create a file called user-input sh using the command touch `user-input.sh`
+step 2: create a file called user-input sh using the command 
+
+`touch user-input.sh`
 
 step 3: Inside the file copyand paste the block of code below:
-
 
 `#!/bin/bash`
 
@@ -161,13 +162,15 @@ step 4: save your file
 
 step 5:  Run the command sudo chmod +x user-input.sh this makes the file executable
 
-step 6: Run the script using the command. `user-input.sh`
+step 6: Run the script using the command. 
+
+`user-input.sh`
 
 Additional Resources
 If you like text based learning material, this guide will be of help Learn-Shell-Scripting
 Visit this link to learn shell scripting in an interactive environment for free.
 
-# Directory Manipulation and Naxigation
+# Directory Manipulation and Navigation
 ## Directory Manipulation and Navigation
 On the back of your lessons on Directory Manipulation and Navigation of Linux fle system, We will be writing a simple
 shell script as a way of practicing what we learnt.
