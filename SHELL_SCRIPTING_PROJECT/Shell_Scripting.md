@@ -248,7 +248,9 @@ echo "Directory removed."`
 
 step 3: Run the command sudo chmod x navigating-linux-filesystem.sh to set execute permission on the file
 
-step 4: Run your script using this command `./navigating-linux-filesystem.sh`
+step 4: Run your script using this command
+
+ `./navigating-linux-filesystem.sh`
 
 ![Images](SHELL_SCRIPT_IMAGES/navigate.PNG)
 
