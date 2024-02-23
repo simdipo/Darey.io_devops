@@ -21,3 +21,37 @@ A simple diagram of Web Client-Server architecture is presented below:
 ![checks](Client_Server_Images/CS.PNG)
 
 
+In the example above, a machine that is trying to access a Web site using Web browser or simply 'curl' command is a
+client and it sends HTTP requests to a Web server (Apache, Nginx, IlS or any other) over the Internet.
+If we extend this concept further and add a Database Server to our architecture, we can get this picture:
+
+![checks](Client_Server_Images/cs2.PNG)
+
+In this case, our Web Server has a role of a "Client" that connects and reads/writes to/from a Database (DB) Server
+(MySQL, MongoDB, Oracle, SQL Server or any other), and the communication between them happens over a Local
+Network (it can also be Internet connection, but it is a common practice to place Web Server and DB Server close to
+each other in local network).
+
+The setup on the diagram above is a typical generic Web Stack architecture that you have already implemented in
+previous projects (LAMP, LEMP, MEAN, MERN), this architecture can be implemented with many other technologies
+various Web and DB servers, from small Single-page applications SPA to large and complex portals.
+
+Real example of LAMP website
+In Project 1 you implemented a LAMP STACK website, let us take an example of commercially deployed LAMP website
+www.propitixhomes.com
+
+This LAMP website server(s) can be located anywhere in the world and you can reach it also from any part of the globe
+over global network-Internet.
+
+Assuming that you go on your browser, and typed in there [www.propitixhomes.com]()
+
+
+It means that your browser is
+considered the ""Client". Essentially, it is sending request to the remote server, and in turn, would be expecting some kind
+of response from the remote server.
+
+Lets take a very quick example and see Client-Server communicatation in action.
+
+Open up your Ubuntu or Windows terminal and run `curl` command:
+
+
