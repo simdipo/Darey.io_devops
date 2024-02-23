@@ -64,6 +64,7 @@ Example: Using if-else to execute script based on a conditions
 The piece of code prompts you to type a number and prints a statement stating the number is
 
 Example: Iterating through a list using a for loop
+
 `#!/bin/bash`
 
  `#Example script to print numbers from 1 to 5 using a for loop` `
