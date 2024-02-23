@@ -272,20 +272,21 @@ step 2: Copy and paste the code block below:
 
 `#!/bin/bash`
 
-`#Define two variables with numeric values`
+#Define two variables with numeric values
 
 `num1=10`
 
 `num2=5` 
 
-`#Perform basic arithmetic operations`
-`sum=$((num1 + num2))
-difference=$((num1 - num2))
-product=$((num1 * num2))
-quotient=$((num1 / num2))
-remainder=$((num1 % num2))`
+#Perform basic arithmetic operations
 
-`#Display the results`
+`sum=$((num1 + num2))`
+`difference=$((num1 - num2))`
+`product=$((num1 * num2))`
+`quotient=$((num1 / num2))`
+`remainder=$((num1 % num2))`
+
+#Display the results
 
 `echo "Number 1: $num1"`
 
