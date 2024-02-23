@@ -72,7 +72,9 @@ Example: Iterating through a list using a for loop
 `for (( i=1; i<=5; i++ ))`
 
 `do`
-    `echo $i`
+
+`echo $i`
+
 `done`
 
 ![Images](SHELL_SCRIPT_IMAGES/count.PNG)
@@ -171,6 +173,9 @@ step 5:  Run the command sudo chmod +x user-input.sh this makes the file executa
 step 6: Run the script using the command. 
 
 `user-input.sh`
+
+![Images](SHELL_SCRIPT_IMAGES/input.PNG)
+
 
 Additional Resources
 If you like text based learning material, this guide will be of help Learn-Shell-Scripting
