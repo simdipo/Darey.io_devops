@@ -328,7 +328,7 @@ step 2: Copy and paste the code block below into the file.
 
 `echo "Renaming sorted file..."`
 
-`mv sorted_files.txt` sorted_files_sorted_alphabetically.txt`
+`mv sorted_files.txt sorted_files_sorted_alphabetically.txt`
 
 `echo "File renamed."`
 
