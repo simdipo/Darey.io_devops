@@ -371,4 +371,5 @@ step 4: Run your script using the command:
 
 `./backup.sh`
 
-![Images](SHELL_SCRIPT_IMAGES)
+![Images](SHELL_SCRIPT_IMAGES/backup.PNG)
+
