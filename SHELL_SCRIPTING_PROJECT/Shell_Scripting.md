@@ -102,6 +102,7 @@ Example: Accept user input
 Example: Output text to the terminal
 
 `echo "Hello Wor1d"`
+
 ![Images](SHELL_SCRIPT_IMAGES/Helloworld.PNG)
 
 
