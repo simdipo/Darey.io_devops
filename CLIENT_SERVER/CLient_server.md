@@ -9,7 +9,8 @@ through insightful explanations and practical examples.
 
 Understanding Client-Server Architecture
 As you proceed your journey into the world of IT, you will begin to realise that certain concepts apply to many other
-areas. One of such concepts is - Client-Server architecture.
+areas. One of such concepts is - [Client-Server architecture.](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)
+
 
 Client-Server refers to an architecture in which two or more computers are connected together over a network to send
 and receive requests between one another.
@@ -22,7 +23,8 @@ A simple diagram of Web Client-Server architecture is presented below:
 
 
 In the example above, a machine that is trying to access a Web site using Web browser or simply 'curl' command is a
-client and it sends HTTP requests to a Web server (Apache, Nginx, IlS or any other) over the Internet.
+client and it sends HTTP requests to a Web server (Apache, Nginx, IIS or any other) over the Internet.
+
 If we extend this concept further and add a Database Server to our architecture, we can get this picture:
 
 ![checks](Client_Server_Images/cs2.PNG)
@@ -34,7 +36,7 @@ each other in local network).
 
 The setup on the diagram above is a typical generic Web Stack architecture that you have already implemented in
 previous projects (LAMP, LEMP, MEAN, MERN), this architecture can be implemented with many other technologies
-various Web and DB servers, from small Single-page applications SPA to large and complex portals.
+various Web and DB servers, from small Single-page applications [SPA](https://en.wikipedia.org/wiki/Single-page_application) to large and complex portals.
 
 Real example of LAMP website
 In Project 1 you implemented a LAMP STACK website, let us take an example of commercially deployed LAMP website
