@@ -52,11 +52,91 @@ It means that your browser is
 considered the ""Client". Essentially, it is sending request to the remote server, and in turn, would be expecting some kind
 of response from the remote server.
 
-Lets take a very quick example and see Client-Server communicatation in action.
+Lets take a very quick example and see Client-Server communication in action.
 
 Open up your Ubuntu or Windows terminal and run `curl` command:
 
 $ `curl -Iv www.propitixhomes.com`
+
+
+
+
+
+Note: If your Ubuntu does not have 'curl', you can install it by running sudo apt install curl
+In this example, your terminal will be the client, while www.propitixhomes.com will be the server.
+See the response from the remote server in below output. You can also see that the requests from the URL are being
+served by a computer with an IP address 160.153.133.153 on port 80.More on IP addresses and ports when we get to
+Networking related projects
+
+
+
+
+
+
+
+
+
+Another simple way to get a server's IP address is to use a simple diagnostic toollike 'ping' it will also show round-trip
+time-time for packets to go to and back from the server, this tool uses ICMP protocol.
+Side Self Study
+1. Read about ping and traceroute network diagnostic utilities. Be able to make sense out of the results of using
+these tools.
+2
+Refresh your knowledge of basic SQL commands, be able to perform simple SHOW, CREATE, DROP, SELECT and
+INSERT SQL queries.
+Instructions On How To Submit Your Work For Review And Feedback
+To submit your work for review and feedback - follow this instruction.
+
+# Implement a Client Server Architecture using MySQL
+## Database Management System (DBMS).
+
+TASK - Implement a Client Server Architecture using MySQL Database Management System
+(DBMS).
+
+To demonstrate a basic client-server using MySQL RDBMS, follow the below instructions
+1. Create and configure two Linux-based virtual servers (EC2 instances in AWS).
+
+Copy Below Code
+Server A name
+Server B name
+mysql server
+mysql client
+
+2. On mysal server Linux Server install MySQL Server software.
+Interesting fact: MySQL is an open-source relational database management system. Its name is a combination of "My",
+the name of co-founder Michael Widenius's daughter, and "SQL", the abbreviation for Structured Query Language.
+
+3. On mysql client Linux Server install MySQL Client software.
+
+4. By default, both of your EC2 virtual servers are located in the same local virtual network, so they can
+communicate to each other using local IP addresses. Use mysql server's local IP address to connect from
+mysgl client . MySQLserver uses TCP port 3306 by default, so you -will have to open it by creating a new entry
+in 'Inbound rules' in 'mysql server Sect,ity Groups. For extra security, do not allow all iP addresses to reach your
+mysqi server allow access only to the specific local lP address of your 'mysql client:
+
+
+
+
+
+5. You might need to configure MySQL server to allow connections from remote hosts.
+Copy Below Code
+sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+Replace '127.0.0.1 to '0.0.0.0' like this:
+
+
+
+6. From mysal client Linux Server connect remotely to mysql server Database Engine without usingSH
+You must use the ysgl utility to perform this action.
+
+7. Check that you have successfully connected to a remote MySQL server and can perform SQL queries:
+Copy Below Code
+Show databases;
+
+
+If you see an output similar to the below image, then you have successfully completed this project - you have deloyed a
+fuly functional MySQL Client-Server set up. Well Done! You are getting there gradually. You can further play around
+with this set up and practice in creating/dropping databases & tables and inserting/selecting records to and from them.
+
 
 
 
