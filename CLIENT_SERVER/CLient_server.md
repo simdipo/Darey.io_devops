@@ -100,11 +100,11 @@ TASK - Implement a Client Server Architecture using MySQL Database Management Sy
 To demonstrate a basic client-server using MySQL RDBMS, follow the below instructions
 1. Create and configure two Linux-based virtual servers (EC2 instances in AWS).
 
-Copy Below Code
-Server A name
-Server B name
-mysql server
-mysql client
+
+Server A name mysql server
+Server B name mysql client
+
+
 
 2. On mysal server Linux Server install MySQL Server software.
 Interesting fact: MySQL is an open-source relational database management system. Its name is a combination of "My",
@@ -114,33 +114,38 @@ the name of co-founder Michael Widenius's daughter, and "SQL", the abbreviation 
 
 4. By default, both of your EC2 virtual servers are located in the same local virtual network, so they can
 communicate to each other using local IP addresses. Use mysql server's local IP address to connect from
-mysgl client . MySQLserver uses TCP port 3306 by default, so you -will have to open it by creating a new entry
-in 'Inbound rules' in 'mysql server Sect,ity Groups. For extra security, do not allow all iP addresses to reach your
-mysqi server allow access only to the specific local lP address of your 'mysql client:
+mysgl client . 
 
+MySQLserver uses TCP port 3306 by default, so you -will have to open it by creating a new entry in 'Inbound rules' in 'mysql server Sect,ity Groups. For extra security, do not allow all iP addresses to reach your mysql server allow access only to the specific local lP address of your 'mysql client:
 
-
-
+![DB](Client_Server_Images/sqlserver.png)
 
 5. You might need to configure MySQL server to allow connections from remote hosts.
+
 Copy Below Code
-sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+
+`sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf`
+
 Replace '127.0.0.1 to '0.0.0.0' like this:
 
+![DB](Client_Server_Images/sqlBindaddress.PNG)
 
-
-6. From mysal client Linux Server connect remotely to mysql server Database Engine without usingSH
-You must use the ysgl utility to perform this action.
+6. From mysql client Linux Server connect remotely to mysql server Database Engine without using SSH
+You must use the mysql utility to perform this action.
 
 7. Check that you have successfully connected to a remote MySQL server and can perform SQL queries:
 Copy Below Code
-Show databases;
 
+`Show databases;`
+
+![DB](Client_Server_Images/mydb.png)
 
 If you see an output similar to the below image, then you have successfully completed this project - you have deloyed a
 fuly functional MySQL Client-Server set up. Well Done! You are getting there gradually. You can further play around
 with this set up and practice in creating/dropping databases & tables and inserting/selecting records to and from them.
 
+![curl](Client_Server_Images/)
 
 
+![success](Client_Server_Images/lastpic.png)
 
