@@ -40,12 +40,12 @@ various Web and DB servers, from small Single-page applications [SPA](https://en
 
 Real example of LAMP website
 In Project 1 you implemented a LAMP STACK website, let us take an example of commercially deployed LAMP website
-`www.propitixhomes.com`
+`www.google.com`
 
 This LAMP website server(s) can be located anywhere in the world and you can reach it also from any part of the globe
 over global network-Internet.
 
-Assuming that you go on your browser, and typed in there `www.propitixhomes.com`
+Assuming that you go on your browser, and typed in there `www.google.com`
 
 
 It means that your browser is
@@ -56,7 +56,9 @@ Lets take a very quick example and see Client-Server communication in action.
 
 Open up your Ubuntu or Windows terminal and run `curl` command:
 
-$ `curl -Iv www.propitixhomes.com`
+$ `curl -Iv www.google.com`
+
+![curl](Client_Server_Images/curl.PNG)
 
 
 
@@ -65,7 +67,7 @@ $ `curl -Iv www.propitixhomes.com`
 Note: If your Ubuntu does not have 'curl', you can install it by running sudo apt install curl
 In this example, your terminal will be the client, while www.propitixhomes.com will be the server.
 See the response from the remote server in below output. You can also see that the requests from the URL are being
-served by a computer with an IP address 160.153.133.153 on port 80.More on IP addresses and ports when we get to
+served by a computer with an IP address 216.58.223.196 on port 80.More on IP addresses and ports when we get to
 Networking related projects
 
 
@@ -76,16 +78,18 @@ Networking related projects
 
 
 
-Another simple way to get a server's IP address is to use a simple diagnostic toollike 'ping' it will also show round-trip
-time-time for packets to go to and back from the server, this tool uses ICMP protocol.
+
+Another simple way to get a server's IP address is to use a simple diagnostic tool like 'ping' it will also show round-trip
+time-time for packets to go to and back from the server, this tool uses [ICMP](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol) 
+protocol.
+
 Side Self Study
-1. Read about ping and traceroute network diagnostic utilities. Be able to make sense out of the results of using
+1. Read about [ping](https://en.wikipedia.org/wiki/Ping_(networking_utility)) and [traceroute](https://en.wikipedia.org/wiki/Traceroute) network diagnostic utilities. Be able to make sense out of the results of using
 these tools.
-2
-Refresh your knowledge of basic SQL commands, be able to perform simple SHOW, CREATE, DROP, SELECT and
+
+2. Refresh your knowledge of [basic SQL commands](https://www.w3schools.com/sql/), be able to perform simple SHOW, CREATE, DROP, SELECT and
 INSERT SQL queries.
-Instructions On How To Submit Your Work For Review And Feedback
-To submit your work for review and feedback - follow this instruction.
+
 
 # Implement a Client Server Architecture using MySQL
 ## Database Management System (DBMS).
