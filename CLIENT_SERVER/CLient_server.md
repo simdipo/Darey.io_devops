@@ -98,12 +98,12 @@ TASK - Implement a Client Server Architecture using MySQL Database Management Sy
 (DBMS).
 
 To demonstrate a basic client-server using MySQL RDBMS, follow the below instructions
+
 1. Create and configure two Linux-based virtual servers (EC2 instances in AWS).
 
+`Server A name mysql server`
 
-Server A name mysql server
-Server B name mysql client
-
+`Server B name mysql client`
 
 
 2. On mysal server Linux Server install MySQL Server software.
