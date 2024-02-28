@@ -316,4 +316,111 @@ plaintext form.
 Encryption can be classifed into several types based on various criteria, such as the encryption process, the key used.
 
 
+and the level of security provided. Here are some common types of encryption:
+
+####  1. Symmetric Encryption
+Symmetric'encryption, the same key is used for both encryption and decryption processes. Both the sender and the
+receiver must possess the shared secret key. While symmetric encryption is generally faster than other methods,
+distributing and managing the secret key securely among all parties can be challenging. Examples of symmetric
+encryption algorithms include Advanced Encryption Standard (AES) and Data Encryption Standard (DES)
+
+####  2. Asymmetric Encryption
+Asymmetric Encryption (Public-Key Encryption): Asymmetric encryption uses two distinct keys, a public key and a
+private key. The public key is used for encryption, while the private key is used for decryption. Anyone can use the
+recipient's public key to encrypt data, but only the recipient with the matching private key can decrypt and read the
+data. This method eliminates the need for secure key distribution but is computationally more intensive than symmetric
+encryption. Popular asymmetric encryption algorithms include RSA (Rivest-Shamir-Adleman) and Eliptic Curve
+Cryptography (ECC).
+
+####  3. Hybrid Encryption
+Hybrid encryption combines both symmetric and asymmetric encryption, In this approach, the sender generates a
+random symmetric key for each message and encrypts the actual data using this symmetric key (which is efficient for
+large amounts of data). Then, the. sender encrypts the symmetric key using the recipient's public key and sends both the
+encrypted data and the encrypted symmetric key to the recipient. The recipient can decrypt the symmetric key using
+their private key and then use the symmetric key to decrypt the actual data. This method leverages the advantages of both symmetric and asymmetric encryption.
+The Purpose of TLS/SSL Certificate
+The main purpose of TLS/SSL certificates is to encrypt the data transmitted between the web server and the client. This
+ensures that sensitive information, such as login credentials, personal data, or credit card details, remains confidential
+and protected from eavesdropping.
+A secondary benefit is to establish trust between webservers and their client. Before data is transmitted between client
+and sever, the server needs to go through the process of authentication(server proves that its identity is genuine) by
+presenting its certificate to the cleint which is validate by a trusted Certificate Authority CA.
+There are terms such as CA, certificate that you may not understand at the moment. But not to worry, all these will be
+explained in the next section.
+How TLS/SSL Work
+TLS/SSL works with hybrid encryption. This means that both syrnmetric and Asymmetric encryption is usedin TLS/SSL.
+Before data is transmitted between client and server, the process of TLS Handshake is carried out.
+During TLS handshake, the server shares with the client its digital certificate. The digital certificate contains the public
+key of the server.
+The client(browser) verifies the validity of the servers public key using the public key of the Certificate Authority CA. If
+valid, the client encrypts it encryption key using the server's public key. This encrypted key is then sent to the server.
+
+
+The client generates its encryption key using symmetric encryption. The implication is that its uses the same key for
+both encryption and decryption hence the need to encrypt its key using the server public key.
+Since the server is the only entity in possession of its private key, It is able to decrypt the clients encrypted key.
+After the handshake process is completed, the client encrypts every data it sends to the server. The server is then able to
+decrypt the data with theclient's encryption key.
+This ensures that only the server is able to make sense of the data shared by the client.
+Advanced Load Balancing Features
+Advanced Load Balancing Features
+Advanced features ofl load balancing enhance theg capabilities and efficiency oflond balancers in handling complex
+scenarios and optimizing application performance. Here are some key advanced features:
+
+#### 1. SSL Offloading/Termination: 
+
+Load balancers can handle Secure Socket Layer (SSL) encryption and decryption on
+behalf of backend servers. This offloading reduces the computational burden on application servers. enabling
+them to focus on processing application logic instead of handling SSL/TLS encryption.
+
+#### 2.Session Persistence/Sticky Sessions; 
+
+Some applications require that a client's requests consistently go to the
+same backend server to maintain session state, Load balancers can use techniques like cookie-based or IP-based persistence to ensure requests from a specific client are directed to the same server throughout the session.
+
+#### 3.Health Checks and Automatic Server Failover: 
+
+Load balancers can perform periodic health checks on backend
+servers to monitor their availability and performance. If a server becomes unresponsive or unhealthy, the load
+balancer can automatically remove it from the server pool, rerouting traffic to healthy servers, thus ensuring high
+availability.
+
+#### 4. Global Server Load Balancing (GSLB): 
+
+GSLB enables load balancing across multiple data centers or
+geographically distributed server clusters. It helps direct traffic to the nearest or most available data center,
+optimizing user experience and providing disaster recovery capabilities.
+
+#### 5. Application-Layer Load Balancing:
+
+ Advanced load balancers can make routing decisions based on application-
+specific attributes beyond traditional lP and TCP/UDP information. For example, they can inspect HT TP headers
+or application-layer protocols to direct traffic based on content, URL, or user agent.
+
+#### 6. Dynamic Load Balancing: 
+
+Some load balancers use real-time analytics and machine learning to dynamically
+adjust server weights or routing decisions based on current server performance, network conditions, and
+application demands. This adaptability ensures efficient resource utilization.
+
+#### 7.Anycast Load Balancing: 
+
+Anycast allows multiple load balancer instances to share the same 1P address across
+different locations. When a client sends a request, it is automatically routed to the nearest load balancer instance,
+reducing latency and improving performance.
+
+#### 8.Rate Limiting and Traffie Shaping:
+
+ Load balancers can enforce rate limits on incoming requests from clients,
+preventing denial-of-service attacks and controlling resource utilization. They can also shape traffic, prioritizing
+certain types of requests over others based on defined policies.
+
+#### 9. Web Application Firewall (WAF) Integration: 
+
+Some load balancers offer integrated WAF functionality to protect
+web applications from common security threats likssQL injection, cross-site scripting (XSS), and other
+vulnerabilities.
+These advanced features make load balancers powerful tools for optimizing application performance, ensuring high
+availability. and protecting applications from various threats and failures. They are essentiat components in modern,
+scalable. and robust IT infrastructures.
 
