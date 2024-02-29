@@ -12,82 +12,73 @@ Introduction to Load Balancing and Nginx
 Load balancing is like having a team of helpers working together to make sure a big job gets done smoothly and
 efficiently. Imagine you have a lot of heavy boxes to carry, but you can't carry them all by yourself because they are too
 heavy.
+
 Load balancing is when you call your friends to help you carry the boxes. Each friend takes some of the boxes and carries
 them to the right place. This way, the work gets done much faster because everyone is working together.
+
 In computer terms, load balancing means distributing the work or tasks among several computers or servers so that no
 one computer gets overloaded with too much work. This helps to keep everything running smoothly and ensures that
 websites and apps work quickly and don't get too slow. It's like teamwork for computers!
+
 Lets say you have a set of webservers serving a serving your website. In other to distribute the traffic evenly between
-the webservers, a load balancer is deployed. The load balancer stands in front of the webservers, all traffic gets to it first,
-it then distributes the traffic across the set of webservers. his is to ensure no webserver get over worked, consequently
-improving system performance.
-ec.
-To..
-rse
-Nginx is aversatile software, it can act like a webserver, reverse proxy, and a load balancer etc. All that is needed is to
+the webservers, a load balancer is deployed. The load balancer stands in front of the webservers, all traffic gets to it first, it then distributes the traffic across the set of webservers. his is to ensure no webserver get over worked, consequently improving system performance.
+
+Nginx is a versatile software, it can act like a webserver, reverse proxy, and a load balancer etc. All that is needed is to
 confgure it properly to server your use case.
+
 In this project we will be wor king you through how to configure Nginx as a load balancer.
 
 
-Setting Up a Basic Load Balancer
-Setting Up a Basic Load Balancer
+# Setting Up a Basic Load Balancer
+## Setting Up a Basic Load Balancer
 We are going to be provisioning two EC2 instances running ubuntu 22.04 and install apache webserver in them. We will
 open port 8000 to allow traffic from anywhere, and finaly update the default page of the webservers to display their
 public IP address.
-sec.
-Next we will provision another 'EC2 instance running ubuntu, 22.04, this time we will install Nginx and configure it to act
-as a load balancer distributing traffic across the webservers.
-sec..
-sec..
+
+Next we will provision another 'EC2 instance running ubuntu, 22.04, this time we will install Nginx and configure it to act as a load balancer distributing traffic across the webservers.
+
+![Images](Load_balancer_Images/launch_Instance.png)
+
 Step 1: Provisioning EC2 instance
-Open your AWS Management Console, click on EC2. Sdpll down the page and click on Launch instance:
-sec..
--console
-(To..
+
+Open your AWS Management Console, click on EC2. Scroll down the page and click on Launch instance:
+
 Under Name, Provide a unique name for each of your webservers
-
-
-
 
 Under Applications and OS Images, click on quick start and click on ubuntu:
 
-
-
+![Images](Load_balancer_Images/qstart.png)
 
 Under Key Pair,click on create new key pair if you do not have one. You can use the same key pair for all the
 instances
 
+![Images](Load_balancer_Images/key_pair.png)
 
 And finally click on Launch Instance
 
+![Images](Load_balancer_Images/instance_LA.png)
 
-
-
-Step 2:Open Port 8000 We willbe running our webservers on port 8000 while the load balancers runs on port 80. We
+Step 2: Open Port 8000 We willbe running our webservers on port 8000 while the load balancers runs on port 80. We
 need to open port 8000 to allow traffic from anywhere. To do this we need to add a rule to the security group of each of
 our webservers
-ec..
-sec..
-Click on the instance ID to get the details of your EC2 instance
 
+Click on the instance ID to get the details of your EC2 instance.
 
+![Images](Load_balancer_Images/EC2.PNG)
 
-On that same page, click on scrol down and click on securiy
-
-
-
+On that same page, click on scroll down and click on securiy
 
 Click on security group
 
+![Images](Load_balancer_Images/inbound.PNG)
 
+On the top of the page click on Action and select Edit inbound rules:
 
-
-On the top of the page click on Action andlselect Edit inbound rules:
-
+![Images](Load_balancer_Images/Acion.PNG)
 
 Add your rule
 
-
+![Images](Load_balancer_Images/add_Rules.PNG)
 
 
 Click on save rules.
