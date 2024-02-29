@@ -209,6 +209,7 @@ Copy Below Code
 
 3. You should find a page on the browser like so:
 
+![Images](Load_balancer_Images/EC2instance.PNG)
 
 Step 5: Configuring Nginx as a Load Balancer
 Provision a new EC2 instance running ubuntu 22.04. Make sure port 80 is opened to accept traffic from
@@ -220,25 +221,29 @@ Install Nginx into the instance using the command below:
 Copy Below Code
 
 `sudo apt update -y && sudo apt install nginx -y`
+
 Verify that Nginx is installed with the command below:
 
 Copy Below Code
 
 `sudo systemctl status nginx`
 
+![Images](Load_balancer_Images/ngistatus.PNG)
 
 
+open Nginx configuration file with the command below:
 
-Goen Nginx configuration file with the command below:
 Copy Below Code
-sudo vi /etc/nginx/conf.d/loadbalancer.cont
+
+`sudo vi /etc/nginx/conf.d/loadbalancer.cont`
+
 Paste the configuration file below to configure nginx to act like a load balancer. A screenshot of an example config
 file is shown below: Make sure you edit.the file and provide necessary information like your server IP address etc.
 
 Copy Below Code
 
         
-        upstream backend_servers {
+        `upstream backend_servers {
 
             # your are to replace the public IP and Port to that of your webservers
             server 127.0.0.1:8000; # public IP and port for webserser 1
@@ -257,7 +262,7 @@ Copy Below Code
                 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             }
         }
-    
+    `
 
 
 addresses and ports of your backend servers. proxy. pass inside the location block: sets up the load balancing.
@@ -269,6 +274,7 @@ Copy Below Code
 
 `sudo nginx -t`
 
+![Images](Load_balancer_Images/testsuccess.png)
 
 
 If there are no errors, restart Nginx to laod the new configuration with the command below:
