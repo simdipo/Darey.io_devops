@@ -97,24 +97,28 @@ Next copy the ssh command below:
 
 `copy-ssh-command`
 
+![Images](Load_balancer_Images/connectInstance.png)
+
+
 Open a terminal in your local machine, cd into your Downloads folder. Paste the ssh command you copied in the
 previous step
 
 
 Click on enter and type yes when prompted. You should be connected to a terminal on your instance.
 
+![Images](Load_balancer_Images/connectInstance.png)
 
 Next install Apache with the command below:
 
 sudo apt update -y &&  sudo apt install apache2 -y
 
-
-
+![Images](Load_balancer_Images/installapache.PNG)
 
 Verify that apache is running with the command below:
 
 sudo systemctl status apache2
 
+![Images](Load_balancer_Images/apahestatus.PNG)
 
 Step 4: Configure Apache to server a page showing its public IP:
 We will start by configuring Apache webserver to serve content on port 8000 instead of its default which is port 80.
@@ -123,38 +127,54 @@ then override apache webserver's default html file with our new file.
 Configuring Apache to Serve content on port 8000:
 
 1. Using your text editor(eg vi, nano) open the file /etc/apache2/ports.conf
+
 Copy Below Code
-sudo vi /etc/apache2 ports.conf
+
+`sudo vi /etc/apache2 ports.conf`
+
 
 2. Add a new Listen directive for port 8000: First type i to switch the editor to insert mode. Then add the
 listen directive. Then save your file
 
-
+![Images](Load_balancer_Images/port_8000.PNG)
 
 
 3. Next open the file /etc/apache 2/sites-available/000-default.conf and change port 80 on the virtualhost to
 8000 like the screenshot below:
+
 Copy Below Code
-sudo vi /etc/apache2/sites-available/000-default.conf
+
+`sudo vi /etc/apache2/sites-available/000-default.conf`
 
 
+![Images](Load_balancer_Images/esc.png)
 
 4. Close the file by first pressing the esc key on your keyboard then the command below:
+
 Copy Below Code
-:wqal
+
+`:wqal`
+
 5. Restart apache to load the new configuration using the command below:
+
 Copy Below Code
-sudo systemctl restart apache2
+
+`sudo systemctl restart apache2`
+
 Creating our new html file:
-1. Open a newindex.html file with the commandlelow:
+
+1. Open a newindex.html file with the command below:
+
 Copy Below Code
-sudo vi index.html
+
+`sudo vi index.html`
+
 2. Switch vi editor to insert mode and paste the html file below. Before pasting the html file, get the public IP
 of your EC2 instance from AWS Management Console and replace the placeholder text for IP address in
 the html file
 Copy Below Code
 
-        <!DOCTYPE html>
+        `<!DOCTYPE html>
         <html>
         <head>
             <title>My EC2 Instance</title>
@@ -163,9 +183,9 @@ Copy Below Code
             <h1>Welcome to my EC2 instance</h1>
             <p>Public IP: YOUR_PUBLIC_IP</p>
         </body>
-        </html>
+        </html>`
 
-
+jhk
 
 3. Change file ownership of the index.html file with the command below:
 Copy Below Code
