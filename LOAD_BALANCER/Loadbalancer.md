@@ -185,7 +185,7 @@ Copy Below Code
         </body>
         </html>`
 
-jhk
+
 
 3. Change file ownership of the index.html file with the command below:
 Copy Below Code
@@ -206,7 +206,8 @@ Copy Below Code
 
 `sudo systemctl restart apache2` 
 
-3,You should find a page on the browser like so:
+3. You should find a page on the browser like so:
+
 
 
 
