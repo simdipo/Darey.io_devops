@@ -80,31 +80,28 @@ Add your rule
 
 ![Images](Load_balancer_Images/add_Rules.PNG)
 
-
 Click on save rules.
+
+![Images](Load_balancer_Images/save.png)
 
 Step 3: Install Apache Webserver
 After provisioning both of our servers and have opened the necessary ports, Its time to install apache software on both
 servers. To do so we must first connect to each of the webserver via ssh. Then we can now run commands on the
 terminal of our webservers.
-Connecting to the webserver: To connect to the webserver, click on your instance Id, at the top of the page click
-on connect.
 
+Connecting to the webserver: To connect to the webserver, click on your instance Id, at the top of the page click on connect.
 
-
-
+![Images](Load_balancer_Images/Apachewebserver.PNG)
 
 Next copy the ssh command below:
 
-copy-ssh-command
+`copy-ssh-command`
 
 Open a terminal in your local machine, cd into your Downloads folder. Paste the ssh command you copied in the
 previous step
 
 
-
 Click on enter and type yes when prompted. You should be connected to a terminal on your instance.
-
 
 
 Next install Apache with the command below:
