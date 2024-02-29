@@ -172,6 +172,7 @@ Copy Below Code
 2. Switch vi editor to insert mode and paste the html file below. Before pasting the html file, get the public IP
 of your EC2 instance from AWS Management Console and replace the placeholder text for IP address in
 the html file
+
 Copy Below Code
 
         `<!DOCTYPE html>
@@ -209,11 +210,10 @@ Copy Below Code
 3. You should find a page on the browser like so:
 
 
-
-
 Step 5: Configuring Nginx as a Load Balancer
-Provision a new EC2instance running ubuntu 22.04. Make sure port 80 is opened to accept traffic from
-anywhere. Your can refer to step 1 through step 2 to refresh your memory.
+Provision a new EC2 instance running ubuntu 22.04. Make sure port 80 is opened to accept traffic from
+anywhere. Your can refer to step 1 through
+ step 2 to refresh your memory.
 Next SSH into the instance. Again refer to step 3 for a refresher if needed.
 Install Nginx into the instance using the command below:
 
