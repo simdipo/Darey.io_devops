@@ -144,7 +144,7 @@ If you see an output similar to the below image, then you have successfully comp
 fuly functional MySQL Client-Server set up. Well Done! You are getting there gradually. You can further play around
 with this set up and practice in creating/dropping databases & tables and inserting/selecting records to and from them.
 
-![curl](Client_Server_Images/)
+![curl](Client_Server_Images/finalsql.png)
 
 
 ![success](Client_Server_Images/lastpic.png)
