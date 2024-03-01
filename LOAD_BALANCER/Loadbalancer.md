@@ -285,6 +285,8 @@ Copy Below Code
 
 Paste the public IP address of Nginx load balancer, you should see the same webpages served by the webservers.
 
+![Images](Load_balancer_Images/finalimages.png)
+
 # Load Balancing Algorithms
 ## Load Balancing Algorithms
 Load balancer algorithms are techniques used to distribute incoming network traffic or workload across multiple
