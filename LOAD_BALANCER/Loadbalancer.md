@@ -285,9 +285,6 @@ Copy Below Code
 
 Paste the public IP address of Nginx load balancer, you should see the same webpages served by the webservers.
 
-
-
-
 # Load Balancing Algorithms
 ## Load Balancing Algorithms
 Load balancer algorithms are techniques used to distribute incoming network traffic or workload across multiple
@@ -388,12 +385,12 @@ Load balancers can handle Secure Socket Layer (SSL) encryption and decryption on
 behalf of backend servers. This offloading reduces the computational burden on application servers. enabling
 them to focus on processing application logic instead of handling SSL/TLS encryption.
 
-#### 2.Session Persistence/Sticky Sessions; 
+#### 2. lmSession Persistence/Sticky Sessions; 
 
 Some applications require that a client's requests consistently go to the
 same backend server to maintain session state, Load balancers can use techniques like cookie-based or IP-based persistence to ensure requests from a specific client are directed to the same server throughout the session.
 
-#### 3.Health Checks and Automatic Server Failover: 
+#### 3. Health Checks and Automatic Server Failover: 
 
 Load balancers can perform periodic health checks on backend
 servers to monitor their availability and performance. If a server becomes unresponsive or unhealthy, the load
@@ -418,13 +415,13 @@ Some load balancers use real-time analytics and machine learning to dynamically
 adjust server weights or routing decisions based on current server performance, network conditions, and
 application demands. This adaptability ensures efficient resource utilization.
 
-#### 7.Anycast Load Balancing: 
+#### 7. Anycast Load Balancing: 
 
 Anycast allows multiple load balancer instances to share the same 1P address across
 different locations. When a client sends a request, it is automatically routed to the nearest load balancer instance,
 reducing latency and improving performance.
 
-#### 8.Rate Limiting and Traffie Shaping:
+#### 8. Rate Limiting and Traffie Shaping:
 
  Load balancers can enforce rate limits on incoming requests from clients,
 preventing denial-of-service attacks and controlling resource utilization. They can also shape traffic, prioritizing
