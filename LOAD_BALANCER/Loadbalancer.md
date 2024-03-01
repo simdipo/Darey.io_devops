@@ -385,7 +385,7 @@ Load balancers can handle Secure Socket Layer (SSL) encryption and decryption on
 behalf of backend servers. This offloading reduces the computational burden on application servers. enabling
 them to focus on processing application logic instead of handling SSL/TLS encryption.
 
-#### 2. lmSession Persistence/Sticky Sessions; 
+#### 2. Session Persistence/Sticky Sessions; 
 
 Some applications require that a client's requests consistently go to the
 same backend server to maintain session state, Load balancers can use techniques like cookie-based or IP-based persistence to ensure requests from a specific client are directed to the same server throughout the session.
