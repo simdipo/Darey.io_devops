@@ -1,0 +1,16 @@
+# Automating Loadbalancerconfiguration with Shell scripting
+
+Streamline your load balancer configuration with ease using shell scripting and simple CI/CD on Jenkins. This project
+demonstrates how to automate the setup and maintenance of your load balancer using a freestyle job, enhancing
+efficiency and reducing manual effort
+
+# Automate the Deployment of Webservers
+Automate the Deployment of Webservers
+In the implementing load balancer with Nginx course, We deployed two backend servers, with a load balancer
+distributing traffic across the webservers. We did that by typing commands right on our terminal.
+In this course we will be automating the entire process. We will do that by writing a shell script that when ran, all that
+will did manually will be done for us automatically. As DevOps Engineers automation is at the heart of the work we do.
+Automation helps us speed the the deployment of services and reduce the chance of making errors in our day to day
+activity.
+This course will give a great introduction to automation.
+
