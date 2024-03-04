@@ -118,39 +118,43 @@ Read the instrictions carefully in the script to learn how to use the script.
 
 Copy Below Code
 
-` #!/bin/bash
+` #!/bin/bash`
 
-######################################################################################################################
-#####This automates the configuration of Nginx to act as a load balancer
-#####Usage:The script is called with 3 command line arguments. The public IP of the EC2 instance where Nginx is installed
-#####the webserver urls for which the load balancer distributes traffic. An example of how to call the script is shown below:
-#####./configure_nginx_loadbalancer.sh PUBLIC_IP Webserver-1 Webserver-2
-#####./configure_nginx_loadbalancer.sh 127.0.0.1 192.2.4.6:8000  192.32.5.8:8000
-############################################################################################################# 
+`######################################################################################################################`
+`#####This automates the configuration of Nginx to act as a load balancer`
+`#####Usage:The script is called with 3 command line arguments. The public IP of the EC2 instance where Nginx is installed`
+`#####the webserver urls for which the load balancer distributes traffic. An example of how to call the script is shown below:`
+`#####./`configure_nginx_loadbalancer.sh
+PUBLIC_IP Webserver-1 Webserver-2
+#####./`configure_nginx_loadbalancer.sh 127.0.0.1 192.2.4.6:8000  192.32.5.8:8000`
+`############################################################################################################`
 
-PUBLIC_IP=$1
-firstWebserver=$2
-secondWebserver=$3
+`PUBLIC_IP=$1`
+`firstWebserver=$2`
+`secondWebserver=$3`
 
-[ -z "${PUBLIC_IP}" ] && echo "Please pass the Public IP of your EC2 instance as the argument to the script" && exit 1
+`[ -z "${PUBLIC_IP}" ] && echo "Please pass the Public IP of your EC2 instance as the argument to the script" && exit 1`
 
-[ -z "${firstWebserver}" ] && echo "Please pass the Public IP together with its port number in this format: 127.0.0.1:8000 as the second argument to the script" && exit 1
+`[ -z "${firstWebserver}" ] && echo "Please pass the Public IP together with its port number in this format: 127.0.0.1:8000 as the second argument to the script" && exit 1`
 
-[ -z "${secondWebserver}" ] && echo "Please pass the Public IP together with its port number in this format: 127.0.0.1:8000 as the third argument to the script" && exit 1
+`[ -z "${secondWebserver}" ] && echo "Please pass the Public IP together with its port number in this format: 127.0.0.1:8000 as the third argument to the script" && exit 1`
 
-set -x # debug mode
-set -e # exit the script if there is an error
-set -o pipefail # exit the script when there is a pipe failure
+`set -x # debug mode`
+`set -e # exit the script if there is an error`
+`set -o pipefail # exit the script when there is a pipe failure`
 
 
-sudo apt update -y && sudo apt install nginx -y
-sudo systemctl status nginx
+`sudo apt update -y && sudo apt install nginx -y`
 
-if [[ $? -eq 0 ]]; then
-    sudo touch /etc/nginx/conf.d/loadbalancer.conf
+`sudo systemctl status nginx`
+
+`if [[ $? -eq 0 ]]; then`
+
+`sudo touch /etc/nginx/conf.d/loadbalancer.`conf`
 
     sudo chmod 777 /etc/nginx/conf.d/loadbalancer.conf
-    sudo chmod 777 -R /etc/nginx/
+
+    `sudo chmod 777 -R /etc/nginx/`
 
     
     echo " upstream backend_servers {
@@ -169,11 +173,11 @@ if [[ $? -eq 0 ]]; then
                 proxy_pass http://backend_servers;   
             }
     } " > /etc/nginx/conf.d/loadbalancer.conf
-fi
+`fi`
 
-sudo nginx -t
+`sudo nginx -t`
 
-sudo systemctl restart nginx`
+`sudo systemctl restart nginx`
 
 ![](Automate_loadbalacer_images/three_servers.png)
 
