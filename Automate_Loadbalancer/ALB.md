@@ -1,4 +1,4 @@
-# Automating Loadbalancerconfiguration with Shell scripting
+# Automating Loadbalancer configuration with Shell scripting
 
 Streamline your load balancer configuration with ease using shell scripting and simple CI/CD on Jenkins. This project
 demonstrates how to automate the setup and maintenance of your load balancer using a freestyle job, enhancing
@@ -19,36 +19,39 @@ This course will give a great introduction to automation.
 
 All the process we need to deploy our webservers has been codified in the shell script below:
 
-` #!/bin/bash
+` #!/bin/bash`
 
-####################################################################################################################
-#####This automates the installation and configuring of apache webserver to listen on port 8000
-#####Usage: Call the script and pass in the Public_IP of your EC2 instance as the first argument as shown below:
-######## ./install_configure_apache.sh 127.0.0.1
-####################################################################################################################
+`####################################################################################################################`
+`#####This automates the installation and configuring of apache webserver to listen on port 8000`
+`#####Usage: Call the script and pass in the Public_IP of your EC2 instance as the first argument as shown below:`
+`######## ./``install_configure_apache.sh 127.0.0.1`
+`####################################################################################################################`
 
-set -x # debug mode
-set -e # exit the script if there is an error
-set -o pipefail # exit the script when there is a pipe failure
+`set -x # debug mode`
+`set -e # exit the script if there is an error`
+`set -o pipefail # exit the script when there is a pipe failure`
 
-PUBLIC_IP=$1
+`PUBLIC_IP=$1`
 
-[ -z "${PUBLIC_IP}" ] && echo "Please pass the public IP of your EC2 instance as an argument to the script" && exit 1
+`[ -z "${PUBLIC_IP}" ] && echo "Please pass the public IP of your EC2 instance as an argument to the script" && exit 1`
 
-sudo apt update -y &&  sudo apt install apache2 -y
+`sudo apt update -y &&  sudo apt install apache2 -y`
 
-sudo systemctl status apache2
+`sudo systemctl status apache2`
 
-if [[ $? -eq 0 ]]; then
+`if [[ $? -eq 0 ]]; then
     sudo chmod 777 /etc/apache2/ports.conf
     echo "Listen 8000" >> /etc/apache2/ports.conf
-    sudo chmod 777 -R /etc/apache2/
+    sudo chmod 777 -R /etc/apache2/`
 
     sudo sed -i 's/<VirtualHost \*:80>/<VirtualHost *:8000>/' /etc/apache2/sites-available/000-default.conf
 
-fi
-sudo chmod 777 -R /var/www/
-echo "<!DOCTYPE html>
+`fi`
+
+`sudo chmod 777 -R /var/www/`
+
+echo`
+<!DOCTYPE html>
         <html>
         <head>
             <title>My EC2 Instance</title>
@@ -59,9 +62,10 @@ echo "<!DOCTYPE html>
         </body>
         </html>" > /var/www/html/index.html`
 
-sudo systemctl restart apache2`
+`sudo systemctl restart apache2`
 
 ![](Automate_loadbalacer_images/autoscript.png)
+
 
 
 Follow the steps below to run the script:
