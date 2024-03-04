@@ -107,17 +107,17 @@ connect to the load balancer via the terminal.
 # Deploying and Configuring Nginx Load Balancer
 ## Deploying and Configuring Nginx Load Balancer
 
-All the steps followed in the Implementing Load Balancer with Nginx course has been codified in the script below:
+All the steps followed in the Implementing Load Balancer with Nginx course has been modified in the script below:
 
 Read the instrictions carefully in the script to learn how to use the script.
 
 Copy Below Code
 
-`#!/bin/bash
+` #!/bin/bash
 
 ######################################################################################################################
 #####This automates the configuration of Nginx to act as a load balancer
-##### Usage:The script is called with 3 command line arguments. The public IP of the EC2 instance where Nginx is installed
+#####Usage:The script is called with 3 command line arguments. The public IP of the EC2 instance where Nginx is installed
 #####the webserver urls for which the load balancer distributes traffic. An example of how to call the script is shown below:
 #####./configure_nginx_loadbalancer.sh PUBLIC_IP Webserver-1 Webserver-2
 #####./configure_nginx_loadbalancer.sh 127.0.0.1 192.2.4.6:8000  192.32.5.8:8000
@@ -169,3 +169,13 @@ fi
 sudo nginx -t
 
 sudo systemctl restart nginx`
+
+![](Automate_loadbalacer_images/three_servers.png)
+
+
+![](Automate_loadbalacer_images/loadbalancer.png)
+
+![](Automate_loadbalacer_images/webserver1.png)
+
+![](Automate_loadbalacer_images/webserver2.png)
+
