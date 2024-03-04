@@ -127,9 +127,10 @@ Copy Below Code
 `#####./`
 `configure_nginx_loadbalancer.sh`
 
-`PUBLIC_IP Webserver-1 Webserver-2
-#####' 
+`PUBLIC_IP Webserver-1 Webserver-2`
+
 `configure_nginx_loadbalancer.sh 127.0.0.1 192.2.4.6:8000  192.32.5.8:8000`
+
 `############################################################################################################`
 
 `PUBLIC_IP=$1`
