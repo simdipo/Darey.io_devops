@@ -183,8 +183,10 @@ Copy Below Code
 
 `sudo systemctl restart nginx`
 
-![](Automate_loadbalacer_images/three_servers.png)
+nginx_success.png)
+![](Automate_loadbalacer_images/
 
+![](Automate_loadbalacer_images/success.png)
 
 ![](Automate_loadbalacer_images/loadbalancer.png)
 
