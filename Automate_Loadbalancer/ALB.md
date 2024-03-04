@@ -183,8 +183,8 @@ Copy Below Code
 
 `sudo systemctl restart nginx`
 
-nginx_success.png)
-![](Automate_loadbalacer_images/
+
+![](Automate_loadbalacer_images/nginx_success.png)
 
 ![](Automate_loadbalacer_images/success.png)
 
