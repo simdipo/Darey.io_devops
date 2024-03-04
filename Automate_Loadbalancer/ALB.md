@@ -186,11 +186,18 @@ Copy Below Code
 
 ![](Automate_loadbalacer_images/nginx_success.png)
 
+ `./nginx.sh 13.51.201.60 16.171.132.64 51.20.6.22`
+
 ![](Automate_loadbalacer_images/success.png)
+
+### Loadbalancer
 
 ![](Automate_loadbalacer_images/loadbalancer.png)
 
+### Webserver 1
+
 ![](Automate_loadbalacer_images/webserver1.png)
 
+### Webserver 2
 ![](Automate_loadbalacer_images/webserver2.png)
 
