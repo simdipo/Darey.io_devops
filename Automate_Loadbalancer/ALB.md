@@ -40,11 +40,12 @@ All the process we need to deploy our webservers has been codified in the shell 
 `sudo systemctl status apache2`
 
 `if [[ $? -eq 0 ]]; then
-    sudo chmod 777 /etc/apache2/ports.conf
-    echo "Listen 8000" >> /etc/apache2/ports.conf
-    sudo chmod 777 -R /etc/apache2/`
+    
+`sudo chmod 777 /etc/apache2/ports.conf`
+    `echo "Listen 8000" >> /etc/apache2/ports.conf`
+    `sudo chmod 777 -R /etc/apache2/`
 
-    sudo sed -i 's/<VirtualHost \*:80>/<VirtualHost *:8000>/' /etc/apache2/sites-available/000-default.conf
+`sudo sed -i 's/<VirtualHost \*:80>/<VirtualHost *:8000>/' /etc/apache2/sites-available/000-default.conf`
 
 `fi`
 
