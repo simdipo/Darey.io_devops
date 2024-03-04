@@ -97,7 +97,7 @@ Step 6: Run the shell script using the command below. Make sure you read the ins
 
 Copy Below Code
 
-`./install.sh PUBLIC_IP`
+`./install.sh 13.51.201.60`
 
 
 ![](Automate_loadbalacer_images/success.png)
@@ -128,8 +128,7 @@ Copy Below Code
 `configure_nginx_loadbalancer.sh`
 
 `PUBLIC_IP Webserver-1 Webserver-2
-#####`
-
+#####' 
 `configure_nginx_loadbalancer.sh 127.0.0.1 192.2.4.6:8000  192.32.5.8:8000`
 `############################################################################################################`
 
