@@ -88,4 +88,4 @@ EC2,each of 10 GiB
 
 Learn How to Add EBS Volume to an EC2 instance here
 
-![](WORDPRESS_LVM_IMAGES/)
+![](WORDPRESS_LVM_IMAGES/Create_Volumes.png)
