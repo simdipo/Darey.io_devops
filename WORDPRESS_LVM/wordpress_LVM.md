@@ -325,13 +325,13 @@ Copy Below Code
 
 
 5. Restart Apache
-`sudo systemcrl restart httpd`
+`sudo systemctl restart httpd`
 
 6. Download wordpress and copy wordpress to var/www/html
 
 `mkdir wordpress`
 
-`cd   wordpress`
+`cd wordpress`
 
 `sudo wget http://wordpress.org/latest.tar.gz`
 
@@ -339,9 +339,11 @@ Copy Below Code
 
 `sudo rm -rf latest.tar.gz`
 
-`cp wordpress/wp-config-sample.php wordpress/wp-config.php`
+`sudo cp wordpress/wp-config-sample.php wordpress/wp-config.php`
 
-`cp -R wordpress /var/www/html/`
+`sudo cp -R wordpress /var/www/html/`
+
+![](WORDPRESS_LVM_IMAGES/wordpress.png)
 
 
 7. Configure SELinux Policies.
@@ -351,6 +353,8 @@ Copy Below Code
  `sudo chcon -t httpd_sys_rw_content_t /var/www/html/wordpress -R`
 
  `sudo setsebool -P httpd_can_network_connect=1`
+
+![](WORDPRESS_LVM_IMAGES/wordpressapache.png)
 
 Step 4 - Install MySQL on your DB Server EC2
 
