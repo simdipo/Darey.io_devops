@@ -344,7 +344,7 @@ cp -R wordpress /var/www/html/`
  sudo chcon -t httpd_sys_rw_content_t /var/www/html/wordpress -R
  sudo setsebool -P httpd_can_network_connect=1`
 
-Step 4 - INstall MySQL on your DB Server EC2
+Step 4 - Install MySQL on your DB Server EC2
 
 `sudo yum update
 sudo yum install mysql-server`
