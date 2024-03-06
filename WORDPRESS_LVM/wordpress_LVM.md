@@ -177,5 +177,54 @@ Copy Below Code
 
 ![](WORDPRESS_LVM_IMAGES/sudolvs.png)
 
+13. Verify the entire setup
+
+`sudo vgdisplay -v #view complete setup - VG, PV, and LV`
+
+`sudo lsblk`
+
+![](WORDPRESS_LVM_IMAGES/sudolsblk.png)
+
+14. Use mnkfs. ext4 to format the logical volumes with ext4 filesystem
+
+Copy Below Code
+
+`sudo mkfs -t ext4 /dev/webdata-vg/apps-lv`
+
+`sudo mkfs -t ext4 /dev/webdata-vg/logs-lv`
+
+![](WORDPRESS_LVM_IMAGES/sudomkfs.png)
+
+15. Create /var/www/html directory to store website files
+
+`sudo mkdir -p /var/www/html`
+
+![](WORDPRESS_LVM_IMAGES/sudomkdir.png)
+
+
+16. Create/home/recovery/logs to store backup of logdata
+
+`sudo mkdir -p /home/recovery/logs`
+
+![](WORDPRESS_LVM_IMAGES/mkdirrecoverylogs.png)
+
+
+17. `Mount /var/www/html` on apps-lv logical volume
+
+`sudo mount /dev/webdata-vg/apps-lv /var/www/html/`
+
+![](WORDPRESS_LVM_IMAGES/mount.png)
+![](WORDPRESS_LVM_IMAGES/mountvarlog.png)
+
+Copy Below Code
+
+18. Use `rsync` utility to backup all the files in the log directory /var/log into /home/recovery/logs (This is required
+before mounting the file system)
+
+Copy Below Code
+
+`sudo rsync -av /var/log/. Yhome/recovery/logs/`
+
+![](WORDPRESS_LVM_IMAGES/rsynch.png)
 
 
