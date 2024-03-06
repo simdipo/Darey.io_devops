@@ -1,4 +1,4 @@
-# Implementing Wordpress websitewith LVM Storage management
+# Implementing Wordpress website with LVM Storage management
 
 Implementing WordPress Website with LVM Storage Management on AWS EC2 Ubuntu Course Description: Welcome
 to the Implementing WordPress Website with LVM Storage Management on AWS EC2 Ubuntu Course. lf you're eager
@@ -34,7 +34,7 @@ solution using [WordPress](https://en.wikipedia.org/wiki/WordPress). WordPress i
 with MySQL or MariaDB as its backend Relational Database Management System (RDBMS).
 Project 6 consists of two parts:
 
-1. Configure storage subsystem for Web and Database servers based on Linux OS. The focus of this part is to g
+1. Configure storage subsystem for Web and Database servers based on Linux OS. The focus of this part is to give
 you practical experience of working with disks, partitions and volumes in Linux.
 
 2. Install WordPress and connect it to a remote MySQL database server. This part of the project will solidify yo
@@ -284,10 +284,16 @@ but instead of `apps-lv` create `db-lv` and mount it to `/db` directory instead 
 Step 3 -  Install Wordpress on your Web Server EC2
 
 1. Update the repository
+
 `sudo yum -y update`
 
+![](WORDPRESS_LVM_IMAGES/sudoupdate.png)
+
 2. Install wget, Apache and it's dependencies
-`sudo yum.-y install wget httpd php php-mysqlnd php-fpm php-json`
+
+`sudo yum -y install wget httpd php php-mysqlnd php-fpm php-json`
+
+![](WORDPRESS_LVM_IMAGES/sudophp.png)
 
 3. Start Apache
 
@@ -295,19 +301,29 @@ Copy Below Code
 
 `sudo systemctl enable httpd`
 
-`sudo systemctl start-httpd`
+![](WORDPRESS_LVM_IMAGES/sudohttpd.png)
+
+`sudo systemctl start httpd`
 
 4. To install PHP and it's dependencies
 
 `sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
 sudo yum install yum-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+
 sudo yum module list php
+
 sudo yum module reset php
+
 sudo yum module enable php:remi-7.4
+
 sudo yum install php php-opcache php-gd php-curl php-mysqlnd
+
 sudo systemctl start php-fpm
+
 sudo systemctl enable php-fpm
 setsebool -P httpd_execmem 1`
+
 
 5. Restart Apache
 `sudo systemcrl restart httpd`
