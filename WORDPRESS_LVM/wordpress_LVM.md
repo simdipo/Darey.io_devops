@@ -227,4 +227,32 @@ Copy Below Code
 
 ![](WORDPRESS_LVM_IMAGES/rsynch.png)
 
+19. `Mount /var/log on logs-lv logical volume`. 
+
+![](WORDPRESS_LVM_IMAGES/mount.png)
+
+(Note that allthe existing data on /var/log will be deleted. That is why step 15 above is very important)
+
+Copy Below Code
+
+`sudo mount /dev/webdata-vg/logs-lv /var/log`
+
+![](WORDPRESS_LVM_IMAGES/mountvarlog.png)
+
+
+20. Restore log files back into /var/log directory
+
+Copy Below Code
+
+`sudo rsync -av /home/recovery/logs/log/. /var/log`
+
+![](WORDPRESS_LVM_IMAGES/rsynch.png)
+
+
+21. Update `/etc/fstab` file so that the mount configuration will persist after restart of the server.
+The UUID of the device will be used to update the `/etc/fstab` file;
+
+`sudo blkid`
+
+![](WORDPRESS_LVM_IMAGES/sodublkid.png)
 
