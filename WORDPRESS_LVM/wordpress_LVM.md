@@ -10,9 +10,8 @@ step-by-step introduction to implementing WordPress on AWS EC2 using Ubuntu as t
 You'll learn how to set up an EC2 instance, configure security groups, and establish a reliable connection to your
 website. Through practical demonstrations and hands-on exercises, you'll delve into the intricacies of LVM storage
 management on Ubuntu. We'lguide you through the process of creatingl pgical volumes, managing disk space, and
-dynamically resizing volumes to accommodate changing storage requirements. As part of the course, you'l gain
-proficiency in installing and configuring WordPress, customizing themes, and adding essential plugins to enhance your
-website's functionality. We'l cover performance optimization techniques and best practices for securing your
+dynamically resizing volumes to accommodate changing storage requirements. As part of the course, you will gain proficiency in installing and configuring WordPress, customizing themes, and adding essential plugins to enhance your
+website's functionality. We will cover performance optimization techniques and best practices for securing your
 WordPress installation on the AWS cloud. Our experienced instructor will provide expert guidance and insights into
 managing a WordPress website on AWS EC2 with LVM storage, You'llearn how to handle common challenges,
 troubleshoot issues, and effectively manage your website's resources.
@@ -98,14 +97,15 @@ Learn How to Add EBS Volume to an EC2 instance here
 
 2. Open up the Linux terminal to begin configuration
 
-3. Use 1sblk command to inspect what block devices are attached to the server. Notice names of your newly
-created devices. A ll devices in Linux reside in /dev/ directory. Inspect it with ts /dev/ and make şure you see all
+3. Use lsblk command to inspect what block devices are attached to the server. Notice names of your newly
+created devices. All devices in Linux reside in /dev/ directory. Inspect it with ts /dev/ and make şure you see all
 3 newly created block devices there - their names wilL likely be xvdf , xvdh , xevdg.
 
 ![](WORDPRESS_LVM_IMAGES/lsblk.png)
 
-4.Use df h command to see all mounts and free space on your server
-5.Use gdisk utility to create a single partition on each of the 3 disks
+4. Use `df -h` command to see all mounts and free space on your server
+
+5. Use `gdisk` utility to create a single partition on each of the 3 disks
 
 Copy Below Code
 
