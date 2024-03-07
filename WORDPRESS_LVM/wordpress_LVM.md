@@ -416,7 +416,8 @@ Copy Below Code
 4. Enable TCP port 80 in Inbound Rules configuration for your Web Server EC2 (enable from everywhere 0.0.0.0/0
 or from your workstation's IP)
 
-5. Try to access from your browser the link to your WordPress 
+5. Try to access from your browser the link to your WordPress
+
 `http://<web-server-Public-IP Address>/wordpress/`
 
 Fill out your DB credentials:
@@ -427,7 +428,7 @@ If you see this message - it means your WordPress has successfully connected to 
  remote MySQL database.
 
 
- IMportant: Do not forget to STOP your EC2 instnces after completion of the projet to aviod extra costs.
+ Important: Do not forget to STOP your EC2 instnces after completion of the projet to aviod extra costs.
 
 
  #CONGRATULATIONS!
