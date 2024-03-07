@@ -185,7 +185,7 @@ Copy Below Code
 
 ![](WORDPRESS_LVM_IMAGES/sudolsblk.png)
 
-14. Use mnkfs. ext4 to format the logical volumes with ext4 filesystem
+14. Use mkfs . ext4 to format the logical volumes with ext4 filesystem
 
 Copy Below Code
 
@@ -360,7 +360,11 @@ Step 4 - Install MySQL on your DB Server EC2
 
 `sudo yum update`
 
+![](WORDPRESS_LVM_IMAGES/sudoyumupdate.png)
+
 `sudo yum install mysql-server`
+
+![](WORDPRESS_LVM_IMAGES/sudomysql.png)
 
 verify that the service is up and running by using `sudo systemctl status mysqld`. If it is not running restart the service and enable it so it will be running even after reboot.
 
@@ -368,22 +372,32 @@ verify that the service is up and running by using `sudo systemctl status mysqld
 
 `sudo systemctl enable mysqld`
 
+![](WORDPRESS_LVM_IMAGES/sqlactive.png)
+
 Step 5 - Configure DB to work with WordPress
 
 `sudo mysql`
 
 `CREATE DATABASE wordpress;`
 
-`CREATE `USER `myuser@<Web-Server-Private-IP-Address> `IDENTIFIED BY 'mypass';`
-`GRANT ALL ON wordpress.* TO `'myuser'@'<Web-Server-Private-IP-Address>';` 
+`CREATE USERmyuser@<Web-Server-Private-IP-Address> IDENTIFIED BY 'mypass';`
+
+`GRANT ALL ON wordpress.* TO 'myuser'@'<Web-Server-Private-IP-Address>';` 
+
 `FLUSH PRIVILEGES;`
+
 `SHOW DATABASES;`
+
 `exit`
+
+![](WORDPRESS_LVM_IMAGES/createdb.png)
 
 Step 6 - Configure WordPress to connect to remote database
 
 Hint: Do not forget to open MySQL port 3306 on DB Server EC2. For extra security, you shall allow access to the DB
 server ONLY-from your Web Server's IP address, so in the Inbound Rule configuration specify source as /32
+
+![](WORDPRESS_LVM_IMAGES/openport.png)
 
 
 1. Install MySQL client and test that you can connect from your Web Server to your DB server by using ysql
@@ -393,7 +407,7 @@ Copy Below Code
 
 `sudo yum install mysql`
 
-`sudo mysgl -u admin -p -h <DB-Server-Private IP-address>`
+`sudo mysql -u admin -p -h <DB-Server-Private IP-address>`
 
 2. Verify if you can successfully execute `SHOW DATABASEs; ` command and see a list of existing databases.
 
@@ -402,7 +416,7 @@ Copy Below Code
 4. Enable TCP port 80 in Inbound Rules configuration for your Web Server EC2 (enable from everywhere 0.0.0.0/0
 or from your workstation's IP)
 
-5.Try to access from your browser the link to your WordPress 
+5. Try to access from your browser the link to your WordPress 
 `http://<web-server-Public-IP Address>/wordpress/`
 
 Fill out your DB credentials:
