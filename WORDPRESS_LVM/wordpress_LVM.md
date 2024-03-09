@@ -85,7 +85,7 @@ To submit your work for review and feedback - follow this instruction.
 1. Launch an EC2 instance that will serve as "Web Server", Create 3 volumes in the same AZ as your Web Server
 EC2,each of 10 GiB
 
-Learn How to Add EBS Volume to an EC2 instance here
+Learn How to Add EBS Volume to an EC2 instance [here](https://www.youtube.com/watch?v=HPXnXkBzIHw)
 
 ![](WORDPRESS_LVM_IMAGES/Create_Volumes.png)
 
@@ -167,7 +167,7 @@ space of the PV size. NOTE: apps-lv will be used to store data for the Website w
 
 Copy Below Code
 
-`sudo lvcreate -n apps-lv L 14G webdata-vg`
+`sudo lvcreate -n apps-lv -L 14G webdata-vg`
 
 `sudo lvcreate -n logs-lv -L 14G webdata-vg`
 
@@ -223,7 +223,7 @@ before mounting the file system)
 
 Copy Below Code
 
-`sudo rsync -av /var/log/. Yhome/recovery/logs/`
+`sudo rsync -av /var/log/. /home/recovery/logs/`
 
 ![](WORDPRESS_LVM_IMAGES/rsynch.png)
 
@@ -321,7 +321,9 @@ Copy Below Code
 
 `sudo systemctl start php-fpm`
 
-`sudo systemctl enable php-fpm setsebool -P httpd_execmem 1`
+`sudo systemctl enable php-fpm`
+
+`sudo setsebool -P httpd_execmem 1`
 
 
 5. Restart Apache
